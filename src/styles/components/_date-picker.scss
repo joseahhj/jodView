@@ -1,0 +1,557 @@
+$prefix-cls-date-picker: #{$prefix-cls}-date-picker;
+$prefix-cls-time-picker: #{$prefix-cls}-time-picker;
+
+
+.#{$prefix-cls-date-picker}{
+    .#{$prefix-cls}-icon{
+        color:$gray-light;
+    }
+    .#{$prefix-cls}-icon-cancel{
+        color:$gray-light1;
+    }
+    &-editor{
+        width:100%
+    }
+}
+
+.#{$prefix-cls-date-picker}-input-range{
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 10px;
+    min-width: 275px;
+    -webkit-appearance: none;
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid $gray-light1;
+    color: $gray-dark;
+    display: inline-block;
+    height: $height-base;
+    line-height: $height-base;
+    outline: none;
+    transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+    position: relative;
+    text-align: left;
+    width:100%;
+    font-size:0;
+    @include clearfix();
+    i,
+    input,
+    span{
+        display: inline-block;
+        vertical-align: top;
+        font-size:14px;
+    }
+    i{
+        line-height: 22px;
+        font-size:16px;
+    }
+    input{
+        border: none;
+        outline: none;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        width: 39%;
+        text-align: center;
+        font-size: 14px;
+        color: #606266;
+        line-height: 1;
+        background: none;
+        &::-webkit-input-placeholder { color: $gray-light1;}
+        &::-moz-placeholder { color: $gray-light1;}
+        &:-ms-input-placeholder { color: $gray-light1;}
+        &:-moz-placeholder { color: $gray-light1;}
+    }
+    .#{$prefix-cls-date-picker}-separator{
+        height: 100%;
+        padding: 0 5px;
+        margin: 0;
+        text-align: center;
+        line-height: 22px;
+        font-size: 14px;
+        color: $gray-dark;
+    }
+    &:hover{
+        border: 1px solid $gray-light;
+    }
+    &-disabled{
+        background: $gray-lighter;
+        .#{$prefix-cls-date-picker}-separator,input{
+            color:$gray-light
+        }
+        &,&:hover{
+           border: 1px solid $gray-light1; 
+        }
+        &::-webkit-input-placeholder { color: $gray-light;}
+        &::-moz-placeholder { color: $gray-light;}
+        &:-ms-input-placeholder { color: $gray-light;}
+        &:-moz-placeholder { color: $gray-light;}
+    }
+    &-large{
+        height: $height-large;
+        line-height: $height-large;
+        padding-top: 9px;
+        padding-bottom: 9px;
+    }
+    &-medium{
+        height: $height-medium;
+        line-height: $height-medium;
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }
+    &-small{
+        height: $height-small;
+        line-height: $height-small;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        i,
+        input,
+        span{
+           font-size:12px;
+           line-height: 22px; 
+        }
+        .#{$prefix-cls-date-picker}-separator{
+            font-size:12px;
+        }
+    }
+}
+
+
+
+.#{$prefix-cls-date-picker}-body-wrapper {
+    position: relative;
+    @include clearfix();
+    .#{$prefix-cls-time-picker}-single{
+        
+        margin-top:-32px;
+        width:312px;
+        float:none;
+        .#{$prefix-cls-time-picker}-list{
+            max-height: 335px;
+        }
+    }
+}
+
+
+
+.#{$prefix-cls-date-picker}-inner {
+    width: 280px;
+    float: left;
+}
+
+.#{$prefix-cls-date-picker}-inner-week {
+    width: 325px;
+}
+
+.#{$prefix-cls-date-picker}-body {
+    padding: 16px;
+    font-size: 14px;
+    @include clearfix(); // text-align: center;
+}
+
+.#{$prefix-cls-date-picker}-dateRange{
+    span{
+        display: inline-block;
+        width: 40px;
+        line-height: 34px;
+        height: 34px;
+        text-align: center;
+        margin: 0 0 6px; 
+        padding:1px 0;
+        color: #212B36;
+    }
+    em{
+        display: inline-block;
+        width:32px;
+        height: 32px;
+        border-radius:100%;
+    }
+}
+
+.#{$prefix-cls-date-picker}-ctrl {
+    padding: 5px 10px 0;
+    line-height: 30px;
+    font-weight: bold;
+    text-align: center;
+    .#{$prefix-cls-date-picker}-icon-btn {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        line-height: 24px;
+        margin-top: 4px;
+        text-align: center;
+        cursor: pointer;
+        color: #ccc;
+        transition: color .2s ease-in-out;
+        &:hover {
+            color: $brand-primary;
+        }
+        i{
+            font-size:18px
+        }
+    }
+    .#{$prefix-cls-date-picker}-prev-btn {
+        float: left
+    }
+    .#{$prefix-cls-date-picker}-next-btn {
+        float: right
+    }
+}
+
+.#{$prefix-cls-date-picker}-header-label {
+    font-weight: 400; // padding: 7px 0;
+    text-align: center;
+    cursor: pointer;
+    &:hover {
+        color: $brand-primary;
+    }
+}
+
+.#{$prefix-cls-date-picker}-monthRange,
+.#{$prefix-cls-date-picker}-yearRange{
+    border-top:1px solid $gray-light1;
+    padding-top: 20px;
+    span{
+        width: 56px;
+        height: 40px;
+        cursor: pointer;
+        display: inline-block;
+        text-align: center;
+        line-height: 40px;
+        margin: 0 12px 30px 0;
+        &:hover{
+            background: none;
+            em{
+                background: $gray-lighter;
+            }
+        }
+    }
+}
+
+.#{$prefix-cls-date-picker}-monthRange .#{$prefix-cls-date-picker}-cell>em,
+.#{$prefix-cls-date-picker}-yearRange .#{$prefix-cls-date-picker}-cell>em {
+    width: 100%;
+    height: 32px;
+    line-height: 32px;
+    display: inline-block;
+    border-radius: 24px;
+}
+
+.#{$prefix-cls-date-picker}-item-disable,
+.#{$prefix-cls-time-picker}-cell-disabled {
+    background-color: $white-base !important;
+    cursor: not-allowed !important;
+}
+
+.#{$prefix-cls-date-picker}-dateRange-item-active:hover em,
+.#{$prefix-cls-date-picker}-dateRange-item-active em {
+    background: $brand-primary !important;
+    color: $white-base !important;
+    border-radius: 5px
+}
+
+.#{$prefix-cls-date-picker}-ctrl span,
+.#{$prefix-cls-date-picker}-ctrl p,
+.#{$prefix-cls-date-picker}-dateRange span {
+    cursor: pointer;
+}
+
+.#{$prefix-cls-date-picker}-monthRange span:hover em,
+.#{$prefix-cls-date-picker}-cell:hover em,
+.#{$prefix-cls-date-picker}-dateRange-item-hover {
+    background-color: $gray-lighter;
+}
+
+.#{$prefix-cls-date-picker}-weekRange {
+    padding: 7px 0;
+    // border-bottom:1px solid $gray-light1;
+    position: relative;
+    span {
+        display: inline-block;
+        width: 40px;
+        font-size:12px;
+        text-align:center;
+        color:#666;
+    }
+    &:after{
+        content:'';
+        position: absolute;
+        left:2.5px;
+        right:2.5px;
+        height:1px;
+        top:0;
+        font-size:0;
+        background: $gray-light1;
+    }
+}
+
+.#{$prefix-cls-date-picker}-weekRow:hover {
+    .#{$prefix-cls-date-picker}-cell-gray + .#{$prefix-cls-date-picker}-cell{
+        border-radius: 32px 0 0 32px
+    }
+    .#{$prefix-cls-date-picker}-cell:first-of-type{
+        border-radius: 32px 0 0 32px
+    }
+    .#{$prefix-cls-date-picker}-cell:last-of-type{
+        border-radius: 0 32px 32px 0
+    }
+    .#{$prefix-cls-date-picker}-cell:not(.#{$prefix-cls-date-picker}-cell-range):not(.#{$prefix-cls-date-picker}-cell-disabled) {
+        background: $gray-lighter;
+    }
+}
+
+
+
+.#{$prefix-cls-date-picker}-cell-next-month em,
+.#{$prefix-cls-date-picker}-cell-prev-month em {
+    color: $gray-light;
+}
+
+.#{$prefix-cls-date-picker}-cell-next-month:hover,
+.#{$prefix-cls-date-picker}-cell-prev-month:hover {
+    color: $gray-light;
+    background: none;
+}
+
+.#{$prefix-cls-date-picker}-cell-selected:hover,
+.#{$prefix-cls-date-picker}-cell-selected{
+    background: none;
+    em{
+        background: $brand-primary !important;
+        color: $white-base !important;
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+    }
+    
+}
+
+.#{$prefix-cls-date-picker}-cell-start,
+.#{$prefix-cls-date-picker}-cell-start:hover,
+.#{$prefix-cls-date-picker}-cell-end,
+.#{$prefix-cls-date-picker}-cell-end:hover {
+    background: $gray-lighter;
+    em{
+      background: $brand-primary !important;
+      color: $white-base !important; 
+      border-radius:100% 
+    }
+}
+
+.#{$prefix-cls-date-picker}-cell-end,
+.#{$prefix-cls-date-picker}-cell-end:hover {
+    border-radius: 0 32px 32px 0
+
+}
+
+.#{$prefix-cls-date-picker}-cell-start,
+.#{$prefix-cls-date-picker}-cell-start:hover {
+    border-radius: 32px 0 0 32px
+}
+.#{$prefix-cls-date-picker}-cell-gray + .#{$prefix-cls-date-picker}-cell-range,
+.#{$prefix-cls-date-picker}-cell-range:first-child{
+     border-radius: 32px 0 0 32px
+}
+.#{$prefix-cls-date-picker}-cell-range:last-child{
+    border-radius: 0 32px 32px 0
+}
+
+.#{$prefix-cls-date-picker}-cell-range,
+.#{$prefix-cls-date-picker}-cell-range:hover {
+    background: $gray-lighter;
+}
+
+.#{$prefix-cls-date-picker}-cell-today em {
+    position: relative;
+    color: $brand-primary
+}
+
+
+
+
+
+.#{$prefix-cls-date-picker}-confirm {
+    border-top: 1px solid $gray-light1;
+    padding: 10px 2px;
+    margin:0 16px;
+    @include clearfix();
+    button {
+        float: right;
+        margin-left: 20px;
+        min-width:64px;
+    }
+    span {
+        float: left;
+        line-height: 32px
+    }
+}
+
+.#{$prefix-cls-date-picker}-confirm-time {
+    cursor: pointer;
+    font-size:14px;
+    color:$gray;
+    &:hover{
+        color: $brand-primary;
+    }
+}
+
+.#{$prefix-cls-date-picker}-confirm-time-disabled {
+    color: $gray-light1;
+    &:hover{
+        color: $gray-light1;
+    }
+}
+
+.#{$prefix-cls-date-picker}-with-range {
+    min-width: 624px;
+}
+
+.#{$prefix-cls-date-picker}-content-left {
+    float: left;
+    .#{$prefix-cls-time-picker}{
+        border-right:2px solid $gray-light1;
+        border-top:1px solid $gray-light1
+    }
+    .#{$prefix-cls-time-picker}-list:first-child {
+        border-left: none
+    }
+}
+
+.#{$prefix-cls-date-picker}-content-right {
+    float: left;
+    .#{$prefix-cls-time-picker}-list:last-child {
+        border-right: none
+    }
+    .#{$prefix-cls-time-picker}{
+        border-top:1px solid $gray-light1
+    }
+}
+
+.#{$prefix-cls-time-picker} {
+    font-size: 14px;
+    @include clearfix();
+}
+
+.#{$prefix-cls-time-picker}-header {
+    text-align: center;
+    font-size: 14px;
+    // border-bottom: 1px solid #e9eaec;
+    padding: 0 16px 5px;
+
+}
+
+.#{$prefix-cls-time-picker}-with-range {
+    min-width: 624px;
+    .#{$prefix-cls-date-picker}-inner {
+        width: 312px;
+    }
+    .#{$prefix-cls-date-picker}-body{
+        padding-left:0;
+        padding-right:0;
+        padding-bottom:0;
+    }
+    
+}
+
+.#{$prefix-cls-time-picker}-list {
+    max-height: 299px;
+    float: left;
+    overflow: auto;
+    position: relative;
+    width: 50%;
+    border-left: 1px solid $gray-lighter;
+    border-right: 1px solid $gray-lighter;
+    
+    ul {
+        width: 100%;
+        margin: 0;
+        list-style: none;
+        padding-bottom: 256px;
+        li {
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            margin: 0;
+            box-sizing: content-box;
+            text-align: center; // -webkit-user-select: none;
+            cursor: pointer;
+            list-style: none;
+            transition: background .2s ease-in-out;
+            &:hover {
+                background: #f3f3f3;
+            }
+        }
+    }
+}
+
+.#{$prefix-cls-time-picker}-with-seconds .#{$prefix-cls-time-picker}-list {
+    width: 33.33%;
+}
+
+.#{$prefix-cls-time-picker}-cell-selected,
+.#{$prefix-cls-time-picker}-cell-selected:hover {
+    background: $gray-lighter;
+}
+
+.#{$prefix-cls-date-picker}-cell-disabled,
+.#{$prefix-cls-date-picker}-cell-gray {
+    color: $gray-light !important;
+}
+
+.#{$prefix-cls-date-picker}-cell-disabled,
+.#{$prefix-cls-date-picker}-cell-disabled:hover,
+.#{$prefix-cls-date-picker}-cell-disabled em,
+.#{$prefix-cls-date-picker}-cell-disabled:hover em {
+    cursor: not-allowed;
+    background: none !important;
+    color: $gray-light !important;
+    text-decoration: line-through;
+}
+
+.#{$prefix-cls-date-picker}-default {
+    @include clearfix();
+    //background: #f7f7f7;
+    .#{$prefix-cls-date-picker}-body-wrapper{
+        width:503px;
+    }
+    .#{$prefix-cls-date-picker}-with-range{
+        width:814px;
+    }
+    .#{$prefix-cls-date-picker}-ctrl{
+        width:312px;
+    }
+    .#{$prefix-cls-date-picker}-shortcut {
+        position: absolute;
+        right: 0;
+        top: 16px;
+        bottom:27px;
+        width: 190px;
+        padding: 0 19px;
+        border-left:2px solid $gray-lighter;
+        .#{$prefix-cls}-radio-inner{
+            width:16px;
+            height:16px;
+        }
+        label{
+            font-size:14px;
+            color: rgba(0,0,0,0.80);
+        }
+        p {
+            margin-bottom: 32px;
+        }
+    }
+    .#{$prefix-cls-date-picker}-shortcut-confirm{
+        bottom:80px
+    }
+    .#{$prefix-cls-date-picker}-body-wrapper {
+        float: left;
+        background: #fff;
+    }
+}
+
+
+.#{$prefix-cls-time-picker}-cell-disabled,
+.#{$prefix-cls-time-picker}-cell-disabled:hover {
+    color: $gray-light;
+    background: none;
+}

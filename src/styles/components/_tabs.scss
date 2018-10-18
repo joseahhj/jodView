@@ -1,0 +1,104 @@
+$prefix-cls-tabs: #{$prefix-cls}-tabs;
+$prefix-cls-tabs-pane: #{$prefix-cls}-tabspane;
+$main-color: 'rgba(255, 0, 0)';
+
+
+.#{$prefix-cls-tabs-pane} {
+    padding: 0 10px 15px 10px
+}
+.#{$prefix-cls-tabs} {
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    color: $gray-dark;
+    &-add {
+        float: right;
+        line-height: 36px;
+        padding-right: 10px;
+        position: relative;
+        z-index: 99;
+        & :first-child {
+            cursor: pointer;
+        }
+    }
+    &-nav {
+        float: left;
+        &-scroll {
+            white-space: nowrap;
+            overflow: hidden;
+            min-height: 36px;
+            line-height: 36px;
+            margin-bottom: -1px;
+        }
+        &-prev, &-next{
+            position: absolute;
+            line-height: 36px;
+            cursor: pointer;
+        }
+        &-prev {
+            left: 8px
+        }
+        &-card {
+            margin-bottom: -1px;
+        }
+    }
+    &-card {
+        box-shadow: 0 2px 6px 0 rgba(0,0,0,.2),0 2px 6px 0 rgba(0,0,0,.06);
+        border-radius: 2px;
+        background-color: #fff;
+        border: 1px solid #d6d3d3
+    }
+    &-bar {
+        position: relative;
+        margin-bottom: 16px;
+        &-card {
+            border-bottom: 1px solid #d6d3d3
+        }
+        &-scroll {
+            margin-left: 20px;
+        }
+        // border-bottom: 1px solid #d6d3d3
+    }
+    &-tab-bottom {
+        height: 2px;
+        width: 74px;
+        background: $brand-primary;
+        position: absolute;
+        box-sizing: border-box;
+        bottom: 0px;
+    }
+}
+.#{$prefix-cls-tabs}-nav-tab {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0px 16px;
+    margin-right: 16px;
+    div:last-child {
+        display: inline-block;
+        //transform: scale(.5)
+    }
+    // div:last-child:hover{
+    //     // background: $gray-light;
+    //     // color:$gray-light;
+    //     // font-weight:700;
+    //     //transform: scale(.6);
+    // }
+    &:hover {
+        color: $brand-primary
+    }
+    cursor: pointer;
+    &-active {
+        background: rgb(255, 255, 255);
+        color: $brand-primary
+    }
+    &-disable {
+        &:hover {
+            color: $gray-light
+        }
+        color: $gray-light;
+        cursor: not-allowed;
+    }
+    > .jad-icon {
+        font-size: $font-size-normal
+    }
+}

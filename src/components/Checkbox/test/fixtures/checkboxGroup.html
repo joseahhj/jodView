@@ -1,0 +1,17 @@
+<div id="app">
+    <j-checkbox :indeterminate="indeterminate" v-model="checkAll" @click.prevent.native="handleCheckAll" ref="indeterminate"> 
+        全选
+    </j-checkbox>
+    <j-checkbox-group v-model="fruit" @on-change="change" ref="basic">
+        <j-checkbox v-for="(item, index) in list" :label="item.label" :key="index">
+            {{ item.text }}
+        </j-checkbox>
+    </j-checkbox-group>
+    <j-checkbox-group ref="checkboxGroup">
+        <j-checkbox label="apple" ref="checkboxItem1">苹果</j-checkbox>
+        <j-checkbox label="pear" ref="checkboxItem2">梨</j-checkbox>
+    </j-checkbox-group>
+    <j-checkbox label="apple" ref="single">
+        苹果
+    </j-checkbox>
+</div>

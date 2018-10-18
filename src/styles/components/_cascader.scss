@@ -1,0 +1,109 @@
+$prefix-cls-cascader: #{$prefix-cls}-cascader;
+$text-height: 40px;
+
+.#{$prefix-cls-cascader} {
+  display: inline-block;
+  position: relative;
+  font-size: 14px;
+  line-height: $text-height;
+  cursor: pointer;
+  .disabled-input {
+    input {
+      width: 100%;
+      line-height: $text-height;
+      height: $text-height;
+    }
+  }
+  .pointer-input {
+    input {
+      width: 100%;
+      line-height: $text-height;
+      height: $text-height;
+      cursor: pointer;
+    }
+  }
+}
+
+.#{$prefix-cls-cascader}-disabled {
+  cursor: not-allowed;
+}
+.#{$prefix-cls-cascader}-menus {
+  white-space: nowrap;
+  background: #fff;
+  position: absolute;
+  margin: 5px 0;
+  z-index: 2;
+  border: 1px solid #e4e7ed;
+  border-radius: 2px;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .1);
+}
+
+.#{$prefix-cls-cascader}-menu {
+  display: inline-block;
+  vertical-align: top;
+  height: 204px;
+  overflow: auto;
+  border-right: 1px solid #e4e7ed;
+  background-color: #fff;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 6px 0;
+  min-width: 160px;
+  .#{$prefix-cls-cascader}-menu-item {
+    font-size: 14px;
+    padding: 8px 20px;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #606266;
+    height: 34px;
+    line-height: 1.5;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none;
+    &:hover {
+      background: #f5f7fa;
+    }
+    &.active {
+      background: #f5f7fa;
+    }
+    &.disabled {
+      color: #c0c4cc;
+      background-color: #fff;
+      cursor: not-allowed;
+    }
+    .#{$prefix-cls-cascader}-right-icon {
+      float: right;
+    }
+  }
+}
+
+.#{$prefix-cls-cascader}-menu-flexible {
+  height: auto;
+  max-height: 180px;
+  overflow: auto;
+}
+
+.#{$prefix-cls-cascader}-menu_item_bold {
+  font-weight: 700;
+}
+
+.#{$prefix-cls-cascader}-label {
+  position: absolute;
+  left: 7px;
+  top: 2px;
+  bottom: 2px;
+  right: 25px;
+  color: #606266;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  box-sizing: border-box;
+  cursor: pointer;
+  text-align: left;
+  font-size: inherit;
+  background: #fff;
+}
+
+

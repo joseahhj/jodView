@@ -1,0 +1,238 @@
+$upload-prefix: jad-upload;
+$upload-trigger-prefix: jad-upload-trigger;
+$upload-list-prefix: jad-upload-list;
+$upload-item-prefix-cls: jad-upload-item;
+.#{$upload-prefix} {
+  &-wrap {
+    display: block;
+  }
+  &-trigger {
+    display: inline-block;
+    transition: all .3s;
+    border-radius: 3px;
+    cursor: pointer;
+    text-align: center;
+  }
+  &-tip{
+    font-size: 12px;
+    color: #666;
+    line-height: 20px;
+    padding: 5px 0;
+  }
+  &-drag{
+    display: block;
+    border: 1px dashed #e6e7e9;
+    width: 360px;
+    height: 180px;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    &:hover{
+      border-color: #666;
+    }
+    &.dragOver{
+      border-color: #666;
+    }
+  }
+  &-pic {
+    width: 150px;
+    height: 150px;
+    border: 1px dashed #e6e7e9;
+    &:hover{
+      border-color: #666;
+    }
+  }
+  &-input {
+    display: none;
+  }
+  &-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    &-item {
+      font-size: 12px;
+      line-height: 1.8;
+      transition: all .3s;
+      color: #666;
+      position: relative;
+      width: 100%;
+      border-radius: 3px;
+      margin-top: 5px;
+      overflow: hidden;
+      &.fail{
+        color: $brand-error;
+      }
+      i {
+        font-size: 12px;
+        color: #666;
+      }
+      &-info {
+        padding-left: 5px;
+      }
+      &-status {
+        position: absolute;
+        right: 0;
+        top: 0;
+        cursor: pointer;
+      }
+      &-percent{
+        position: absolute;
+        right: 5px;
+        transform: translate(0, 0);
+        transition: all 0.3s
+      }
+      .jad-icon-checkmark {
+        position: absolute;
+        padding: 0;
+        right: 5px;
+        font-size: 14px;
+        color: $brand-success;
+        transform: translate(0, 0);
+        transition: all 0.3s
+      }
+      .jad-icon-cancel {
+        cursor: pointer;
+        position: absolute;
+        padding: 0;
+        right: 5px;
+        font-size: 14px;
+        color: #ccc;
+        opacity: 0;
+        transform: translate(20px, 0);
+        transition: all 0.3s
+      }
+      &:hover {
+        background-color: #f5f5f5;
+        .jad-icon-checkmark {
+          transform: translate(-20px, 0);
+          cursor: default;
+          opacity: 0;
+        }
+        .jad-icon-cancel {
+          opacity: 1;
+          transform: translate(0, 0);
+        }
+        .#{$upload-list-prefix}{
+          &-item{
+            &-percent{
+              transform: translate(-25px, 0);
+            }
+          }
+        }
+      }
+    }
+    &-trigger{
+      border: none;
+      width: 150px;
+      height: 150px;
+      display: inline-block;
+      cursor: pointer;
+      position: relative;
+      border-radius: 3px;
+      .jad-icon{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        cursor: pointer;
+        transform: translate(-50%, -50%);
+      }
+    }
+    &-pic {
+      display: inline;
+      vertical-align: top;
+      margin: 0;
+      li{
+        display: inline-block;
+        vertical-align: top;
+        background-color: #fff;
+        border-radius: 3px;
+      }
+      .#{$upload-list-prefix} {
+        &-item {
+          width: 150px;
+          height: 150px;
+          border: 1px solid #e6e7e9;
+          position: relative;
+          display: inline-block;
+          margin: 0 10px 10px 0;
+          overflow: hidden;
+          &.done{
+
+          }
+          &.fail{
+            border-color: $brand-error;
+          }
+          &:hover {
+            .#{$upload-list-prefix}-item-mask {
+              opacity: 1;
+            }
+          }
+          &-info {
+            padding: 0;
+            img {
+              width: 148px;
+              height: 148px;
+            }
+          }
+          &-status{
+            display: none;
+          }
+          &-mask {
+            position: absolute;
+            z-index: 3;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.5);
+            transition: all 0.3s;
+            opacity: 0;
+            .jad-icon{
+              font-size: 18px;
+              color: #fff;
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              cursor: pointer;
+              transform: translate(-50%, -50%);
+            }
+            .jad-icon-trash-o2 {
+              margin-left: 15px;
+            }
+            .jad-icon-eye2{
+              margin-left: -15px;
+            }
+          }
+          .jad-progress{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            padding: 4px;
+            background: rgba(255, 255, 255, .8);
+          }
+        }
+      }
+    }
+  }
+}
+.upload{
+  &-enter{
+    background-color:#f4f8fb;
+    transform: translate(0, -100%);
+    &-active{
+      transition: background-color .5s;
+      transform: translate(0, 0);
+    }
+  }
+  &-leave{
+    &-active{
+      opacity: 0;
+      transform: translate(0, -100%);
+    }
+  }
+  &-move{
+    transition: all .5s;
+  }
+}
+

@@ -1,0 +1,111 @@
+$prefix-cls-alert: #{$prefix-cls}-alert;
+$prefix-cls-alert-padding-desc: 8px 30px 8px 48px;
+$prefix-cls-alert-padding: 8px 30px 8px 40px;
+
+.#{$prefix-cls-alert}-fade-leave-active {
+    transition: opacity .5s;
+}
+.#{$prefix-cls-alert}-fade-leave-to {
+    opacity: 0
+}
+
+@mixin alert_padding {
+    &-icon {
+        &-desc {
+            padding: $prefix-cls-alert-padding-desc                
+        }
+        padding: $prefix-cls-alert-padding-desc
+    }
+}
+
+@mixin background-border-color($bck-color) {
+    background-color: $bck-color;
+}
+
+.#{$prefix-cls-alert} {
+    position: relative;
+    color: $gray-dark;
+    font-size: $font-size-normal;
+    padding: 6px 30px 6px 16px;
+    line-height: 20px;
+    margin-bottom: 10px;
+    a{
+        color:$brand-info;
+    }
+
+    &-message {
+        &-bold {
+            font-weight: 700;            
+        }
+    }
+    &-desc {
+        display: block;
+        text-align: justify;
+        line-height: 1.5;
+    }
+    &-nowrap{
+        .#{$prefix-cls-alert}-message,
+        .#{$prefix-cls-alert}-desc{
+            overflow:hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+    &-close {
+        position: absolute;
+        cursor: pointer;
+        font-size: 12px;
+        top: 8px;
+        right: 16px;
+        color: #8f8f91;
+        overflow: hidden;
+        i {
+            font-size: 14px
+        }
+    }
+    &-icon {
+        position: absolute;
+        top: 50%;
+        margin-top: -9px;
+        left: 20px;
+        i{
+           font-size:$font-size-xlarge; 
+        }
+        &-desc {
+            top: 50%;
+            left: 12px;
+            margin-top: -6px;
+            i {
+                font-size: 28px
+            }
+        }
+        &-info {
+            color: $brand-info;
+        }
+        &-success {
+            color: $brand-success;
+        }
+        &-warn {
+            color: $brand-warning;
+        }
+        &-error {
+            color: $brand-error;
+        }
+    }
+    &-info {
+        @include alert_padding();
+        @include background-border-color($alert-info);
+    }
+    &-success { 
+        @include alert_padding();
+        @include background-border-color($alert-success);
+    }
+    &-warn {
+        @include alert_padding();
+        @include background-border-color($alert-warning);
+    }
+    &-error {
+        @include alert_padding();
+        @include background-border-color($alert-error);
+    }
+}

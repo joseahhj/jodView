@@ -1,0 +1,268 @@
+$prefix-cls-btn: #{$prefix-cls}-btn;
+$enable-gradients-default: false;
+$enable-gradients-base: true;
+.#{$prefix-cls-btn} {
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    vertical-align: middle;
+    border: 1px solid #ccc;
+    user-select: none;
+    outline: none;
+    @include transition($btn-transition);
+    @include button-size($btn-padding-base, $font-size-normal, $btn-line-height-base, $border-radius-default, $height-base);
+    &-default {
+        color: $gray-dark;
+        border-color: #ddd;
+        background: $white-base;
+        font-weight: 400;
+        // &:focus,
+        // &.focus {
+        //     color: $brand-primary;
+        //     background-color: lighten($brand-primary, 50%);
+        //     border-color: lighten($brand-primary, 30%);
+        // }
+        &:hover {
+            color: #333;
+            background-color: #fff;
+            border-color: #999;
+        }
+        &:active,
+        &.active {
+            background-color: #F8F8F8;
+            border-color: #999;
+        }
+        &.disabled,
+        &:disabled {
+            &,
+            &:hover,
+            &:focus,
+            &.focus {
+                color: #999;
+                cursor: not-allowed;
+                background: #EEE;
+                border-color: #ddd;
+                background: #EEEEEE;
+            }
+        }
+    }
+    &-outline-default {
+        color: $gray-dark;
+        border-color: #ddd;
+        background: $white-base;
+        font-weight: 400;
+        // &:focus,
+        // &.focus {
+        //     color: $brand-primary;
+        //     border-color: $brand-primary
+        // }
+        &:hover {
+            color: $brand-primary;
+            border-color: $brand-primary
+        }
+        // &:active,
+        // &.active {
+        //     color: $brand-primary;
+        //     border-color: $brand-primary
+        // }
+        &.disabled,
+        &:disabled {
+            &,
+            &:hover,
+            &:focus,
+            &.focus {
+                color: #999;
+                cursor: not-allowed;
+                background: #EEE;
+                border-color: #ddd;
+                background: #EEEEEE;
+            }
+        }
+    }
+    &-linear {
+        color: #333;
+        border-color: #ccc;
+        border-bottom-color: #aaa;
+        @include gradient-y($primary-form-color, $primary-to-color);
+        &:hover,
+        &:focus {
+            border: 1px solid #aaa;
+        }
+        &.disabled,
+        &:disabled {
+            &,
+            &:hover,
+            &:focus,
+            &.focus {
+                color: #999;
+                cursor: not-allowed;
+                background: #EEE;
+                border-color: #ddd;
+                background: #EEEEEE;
+            }
+        }
+        &:not(:disabled):not(.disabled):active,
+        &:not(:disabled):not(.disabled).active {
+            @include gradient-y($primary-active-form-color, $primary-active-to-color);
+            border: 1px solid #aaa;
+            color: #333;
+        }
+    }
+    &-linear-red {
+        color: #fff;
+        border-color: #{$secondary-form-color};
+        border-bottom-color: #ba0909;
+        @include gradient-y($secondary-form-color, $secondary-to-color);
+        &:hover,
+        &:focus {
+            border-color: #ba0909;
+            color: #fff;
+        }
+        &.disabled,
+        &:disabled {
+            &,
+            &:hover,
+            &:focus,
+            &.focus {
+                color: #999;
+                cursor: not-allowed;
+                background: #EEE;
+                border-color: #ddd;
+                background: #EEEEEE;
+            }
+        }
+        &:not(:disabled):not(.disabled):active,
+        &:not(:disabled):not(.disabled).active {
+            @include gradient-y($secondary-active-form-color, $secondary-active-to-color);
+            color: #fff;
+            border-color: #ba0909;
+        }
+    }
+    [class^=#{$prefix-cls}-icon] {
+        vertical-align: middle;
+    }
+}
+
+//
+// Alternate buttons
+//
+@each $color,
+$value in $theme-colors {
+    .#{$prefix-cls-btn}-#{$color} {
+        @include button-variant($white-base, $value, $value);
+    }
+}
+
+@each $color,
+$value in $theme-colors {
+    .#{$prefix-cls-btn}-outline-#{$color} {
+        @include button-outline-variant($value, $white-base);
+    }
+}
+
+@each $color,
+$value in $theme-colors {
+    @if($color=='primary') {
+        .#{$prefix-cls-btn}-linear-#{$color} {
+            @include button-linear-variant(darken($primary-to-color, 80%), $primary-form-color, $primary-to-color, darken($primary-to-color, 10%), darken($primary-to-color, 25%))
+        }
+    }
+    @else {
+        .#{$prefix-cls-btn}-linear-#{$color} {
+            @include button-linear-variant($btn-success-color, $value, darken($value, 10%), darken($value, 8%), darken($value, 20%))
+        }
+    }
+}
+
+.#{$prefix-cls-btn}-large {
+    @include button-size($btn-padding-large, $font-size-normal, $btn-line-height-large, $border-radius-default, $height-large);
+    .#{$prefix-cls-btn}-loader,
+    .#{$prefix-cls-btn}-loader:after {
+        @include button-load-width(20px)
+    }
+    .#{$prefix-cls-btn}-loader {
+        @include button-load(2px)
+    }
+}
+
+.#{$prefix-cls-btn}-medium {
+    @include button-size($btn-padding-medium, $font-size-normal, $btn-line-height-medium, $border-radius-default, $height-medium);
+    .#{$prefix-cls-btn}-loader,
+    .#{$prefix-cls-btn}-loader:after {
+        @include button-load-width(15px)
+    }
+}
+
+.#{$prefix-cls-btn}-small {
+    @include button-size($btn-padding-small, $font-size-small, $btn-line-height-small, $border-radius-default, $height-small);
+    .#{$prefix-cls-btn}-loader,
+    .#{$prefix-cls-btn}-loader:after {
+        @include button-load-width(10px)
+    }
+}
+
+.#{$prefix-cls-btn}-dash {
+    border-style: dashed;
+    background: #fff;
+    &:hover,
+    &:focus,
+    &:active {
+        color: #2db7f5;
+        border-color: #2db7f5;
+    }
+    .#{$prefix-cls-btn}-loader {
+        @include button-load(2px, 80)
+    }
+}
+
+.#{$prefix-cls-btn}-primary {
+    .#{$prefix-cls-btn}-loader {
+        @include button-load(2px, 80)
+    }
+}
+
+.is-circle {
+    border-radius: 100%;
+}
+
+.#{$prefix-cls-btn}-block {
+    width: 100%;
+    display: block;
+}
+
+.#{$prefix-cls-btn}-text {
+    border: none;
+    background: none;
+    &:hover {
+        background: none;
+        color: #2db7f5
+    }
+}
+
+.#{$prefix-cls-btn}-loading {
+    pointer-events: none;
+    position: relative;
+    opacity: 0.6
+}
+
+.#{$prefix-cls-btn}-loader {
+    animation: load8 1.1s infinite linear;
+    @include button-load(1px)
+}
+
+.#{$prefix-cls-btn}-loader,
+.#{$prefix-cls-btn}-loader:after {
+    border-radius: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    @include button-load-width(12px)
+}
+
+.#{$prefix-cls-btn}-circle {
+    border-radius: 28px;
+}
+
+.#{$prefix-cls-btn}-rectangle {
+    border-radius: 0;
+}

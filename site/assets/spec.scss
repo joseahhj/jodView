@@ -1,0 +1,21 @@
+.clearfix:after, .clearfix:before {
+    content: "";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.clearfix {
+	clear: both;
+	zoom: 1;
+}
+.router-link-active { color: #E1251B !important;font-weight: 700; }
+.lh1{line-height: 1.5}
+.fr { float:right }
+.fz12 { font-size:12px!important }
+.fz14 { font-size:14px!important }
+.fz40 { font-size:40px }
+.bd7 { font-weight:700 }
+
+.gray9 { color:#999 }
+.pb10 { padding-bottom:10px }
+.pt10 { padding-top:10px }

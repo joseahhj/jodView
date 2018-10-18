@@ -1,0 +1,29 @@
+// $secondary-form-color: #ddd;
+// $prefix-cls: jad;
+@import '../../src/styles/index';
+// #{$prefix-cls}-theme-mobile
+$radioCls: jad-radio;
+$color-blue: #2f8ffd;
+.#{$radioCls}-wrapper.jad-theme-mobile {
+    &:hover {
+        .#{$radioCls}:not(.#{$radioCls}-disabled) {
+            .#{$radioCls}-inner {
+                border-color: $color-blue;
+            }
+        }
+    }
+    .#{$radioCls}-checked {
+        .#{$radioCls}-inner {
+            border-color: $color-blue;
+            background-color: $color-blue;
+        }
+    }
+}
+
+$inputCls: jad-input;
+.#{$inputCls}-wrapper.jad-theme-dark {
+    .#{$inputCls} {
+        background-color: #fafafa;
+        font-weight: bold;
+    }
+}

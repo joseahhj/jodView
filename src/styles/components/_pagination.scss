@@ -1,0 +1,223 @@
+$prefix-cls-pagination: #{$prefix-cls}-pagination;
+
+.#{$prefix-cls-pagination} {
+  white-space: nowrap;
+  padding: 5px;
+  &-pager {
+    display: inline-block;
+    vertical-align: top;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    line-height: 28px;
+    li {
+      display: inline-block;
+      min-width: 30px;
+      height: 30px;
+      line-height: 28px;
+      border: 1px solid transparent;
+      text-align: center;
+      padding: 0 2px;
+      cursor: pointer;
+      transition: color .3s;
+      &.active {
+        color: $brand-primary;
+        cursor: default;
+      }
+      &:hover {
+        color: $brand-primary;
+      }
+    }
+    .pageIcon{
+      .jad-icon{
+        font-size: 14px;
+        line-height: 26px;
+      }
+      .jad-icon-angle-double-left {
+        display: none;
+      }
+      .jad-icon-angle-double-right {
+        display: none;
+      }
+      .jad-icon-ellipsis{
+        display: inline-block;
+      }
+      &:hover{
+        .jad-icon-angle-double-right{
+          display: inline-block;
+        }
+        .jad-icon-angle-double-left{
+          display: inline-block;
+        }
+        .jad-icon-ellipsis{
+          display: none;
+        }
+      }
+    }
+  }
+  &-button {
+    display: inline-block;
+    height: 30px;
+    line-height: 28px;
+    border: 1px solid transparent;
+    vertical-align: top;
+    min-width: 30px;
+    text-align: center;
+    cursor: pointer;
+    transition: color .3s;
+    background: none; 
+    i {
+      display: block;
+      margin-top: -2px;
+    }
+    &:hover {
+      color: $brand-primary;
+    }
+    &.disabled {
+      cursor: not-allowed;
+      color: $gray-light;
+    }
+  }
+  &-total{
+    display: inline-block;
+    line-height: 30px;
+    padding: 0 5px;
+  }
+  &-jumper{
+    display: inline-block;
+    padding: 0 8px;
+  }
+  .jad-inputnumber-small{
+    width: 45px;
+  }
+  &-sizer{
+    display: inline-block;
+    padding: 0 8px;
+  }
+  &-divider{
+    padding: 0 5px;
+    display: inline-block;
+  }
+  &-popper-pagesize{
+     &-item{
+        cursor: pointer;
+        display: block;
+        padding: 0 15px;
+        clear: both;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 32px;
+        color: $gray-dark;
+        white-space: nowrap;
+        &:hover,
+        &:focus,
+        &.#{$prefix-cls-pagination}-popper-item-selected {
+            text-decoration: none;
+            background-color: $dropdown-link-hover-bg;
+        }
+     }
+     .#{$prefix-cls}-popover-inner{
+        padding: 0;
+        min-width:30px
+     }
+  }
+}
+
+.#{$prefix-cls-pagination} {
+  &-bg {
+    .#{$prefix-cls-pagination} {
+      &-pager {
+        line-height: 24px;
+        li {
+          background-color: #fff;
+          border-color: $gray-lighter;
+          margin: 0 4px;
+          border-radius: 3px;
+          transition: all .3s;
+          &:hover {
+            border-color: $brand-primary;
+            color: $brand-primary;
+          }
+          &.active {
+            background-color: $brand-primary;
+            border-color: $brand-primary;
+            color: #fff;
+          }
+
+        }
+      }
+      &-button {
+        background-color: #fff;
+        border-color: $gray-lighter;
+        margin: 0 4px;
+        border-radius: 3px;
+        transition: all .3s;
+        &:hover {
+          border-color: $brand-primary;
+          color: $brand-primary;
+        }
+        &.disabled {
+          cursor: not-allowed;
+          border-color: $gray-lighter;
+          color: $gray-lighter;
+        }
+      }
+    }
+  }
+}
+
+.#{$prefix-cls-pagination} {
+  &-mini {
+    font-size: 12px;
+    &.#{$prefix-cls-pagination} {
+      .#{$prefix-cls-pagination} {
+        &-pager {
+          height: 24px;
+          line-height: 22px;
+          li {
+            height: 24px;
+            line-height: 22px;
+            min-width: 24px;
+          }
+          .pageIcon{
+            .jad-icon{
+              font-size: 12px;
+              line-height: 20px;
+            }
+          }
+        }
+        &-button {
+          height: 24px;
+          line-height: 22px;
+          min-width: 24px;
+          i {
+            font-size: 14px;
+          }
+        }
+        &-total{
+          display: inline-block;
+          height: 24px;
+          line-height: 24px;
+          padding: 0 5px;
+        }
+        &-jumper{
+          display: inline-block;
+          padding: 0 8px;
+          height: 24px;
+        }
+        &-sizer{
+          display: inline-block;
+          padding: 0 8px;
+          vertical-align: top;
+          height: 24px;
+          line-height: 24px;
+        }
+      }
+      .jad-inputnumber-mini{
+        width: 45px;
+        height: 24px;
+      }
+    }
+  }
+}
+

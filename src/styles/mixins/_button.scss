@@ -1,0 +1,137 @@
+// Gradients
+@mixin gradient-bg($color, $enable-gradients) {
+    @if $enable-gradients {
+        background: $color linear-gradient(180deg, mix($body-bg, $color, 15%), $color) repeat-x;
+    }
+    @else {
+        background-color: $color;
+    }
+}
+
+// Vertical gradient, from top to bottom
+//
+// Creates two color stops, start and end, by specifying a color and position for each color stop.
+@mixin gradient-y($start-color: $primary-form-color, $end-color: $primary-to-color) {
+    background-image: linear-gradient(to bottom, $start-color, $end-color);
+    background-repeat: repeat-x;
+}
+
+// Button variants
+//
+// Easily pump out default styles, as well as :hover, :focus, :active,
+// and disabled options for all buttons
+@mixin button-variant($color, $background, $border) {
+    color: $color;
+    border-color: $background;
+    background: $background;
+    font-weight: 400;
+    &:hover {
+        //color: $color;
+        background-color: lighten($background, 10%);
+        border-color: lighten($background, 10%);
+    }
+    &:active,
+    &.active {
+        //color: $color;
+        border-color: darken($background,1%);
+        background: darken($background,1%);
+    }
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] {
+        &,
+        &:hover,
+        &:focus,
+        &.focus {
+            color: #999;
+            cursor: not-allowed;
+            background: #EEE;
+            border-color: #ddd;
+            background: #EEEEEE;
+        }
+    }
+}
+
+@mixin button-outline-variant($color, $color-hover, $border: $color, $active-background: $color, $active-border: $color) {
+    color: $color;
+    background-color: #fff;
+    background-image: none;
+    border-color: $border;
+    &:hover {
+        color: $color-hover;
+        background-color: $active-background;
+        border-color: $active-border;
+    }
+    &.disabled,
+    &:disabled {
+        &,
+        &:hover,
+        &:focus,
+        &.focus {
+            color: #999;
+            cursor: not-allowed;
+            background: #EEE;
+            border-color: #ddd;
+            background: #EEEEEE;
+        }
+    }
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active {
+        color: $color-hover;
+        background-color: $active-background;
+        border-color: $active-border;
+    }
+}
+
+@mixin button-linear-variant($color, $start-color, $end-color, $border, $border-bot) {
+    color: $color;
+    border-color: $border;
+    border-bottom-color: $border-bot;
+    @include gradient-y($start-color, $end-color);
+    &:hover,
+    &:focus,
+    &.focus {
+        border-color: $border-bot;
+        color: $color;
+    }
+    &.disabled,
+    &:disabled {
+        &,
+        &:hover,
+        &:focus,
+        &.focus {
+            color: #999;
+            cursor: not-allowed;
+            background: #EEE;
+            border-color: #ddd;
+            background: #EEEEEE;
+        }
+    }
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active {
+        @include gradient-y($end-color, $start-color);
+        border-color: $border-bot;
+        color: $color;
+    }
+}
+
+// Button sizes
+@mixin button-size($padding-horizontal, $font-size, $line-height, $border-radius, $height) {
+    padding: 0 $padding-horizontal;
+    font-size: $font-size;
+    line-height: $line-height;
+    height: $height;
+    border-radius: $border-radius;
+}
+
+@mixin button-load($borderW, $color: 255) {
+    border-top: $borderW solid rgba($color, $color, $color, 0.2);
+    border-right: $borderW solid rgba($color, $color, $color, 0.2);
+    border-bottom: $borderW solid rgba($color, $color, $color, 0.2);
+    border-left: $borderW solid #fff;
+}
+
+@mixin button-load-width($boxW) {
+    width: $boxW;
+    height: $boxW;
+}

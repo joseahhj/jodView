@@ -1,0 +1,53 @@
+$prefix-cls-badge: #{$prefix-cls}-badge;
+.#{$prefix-cls-badge} {
+    position: relative;
+    vertical-align: middle;
+    display: inline-block;
+    &-large {
+        height: 20px;
+        line-height: 18px;
+        padding: 0 6px;
+        min-width: 20px; 
+        border-radius: 10px;
+    }
+    &-small {
+        height: 16px;
+        line-height: 14px;
+        padding: 0 3px;
+        min-width: 16px; 
+        border-radius: 8px;
+    }
+    &-content {
+        background-color: #fd4545;
+        color: #fff;
+        display: inline-block;
+        font-size: 12px;
+        border: 1px solid #fff;
+        text-align: center;
+        white-space: nowrap;
+    }
+    &-fixed {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translateY(-50%) translateX(50%);
+    }
+    &-dot {
+        height: 8px;
+        width: 8px;
+        padding: 0;
+        border-radius: 50%;
+    }
+    &-info {
+        background-color: #2e8ef3;
+    }
+    &-success {
+        background-color: #1bc16e;
+    }
+    &-warn {
+        background-color: #fd9b09;
+    }
+    &-error {
+        background-color: #f33608;
+    }
+}

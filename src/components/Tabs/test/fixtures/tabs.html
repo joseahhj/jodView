@@ -1,0 +1,39 @@
+<div id="app">
+    <div class="row">
+        <j-tabs value="one" ref="tab_basic">
+            <j-tabs-pane label="标签一" name="one">我是标签一</j-tabs-pane>
+            <j-tabs-pane label="标签二" name="two">我是标签二</j-tabs-pane>
+            <j-tabs-pane label="标签三" name="three" icon="github">我是标签三</j-tabs-pane>
+        </j-tabs>
+        <j-tabs value="one" type="card" ref="tab_card">
+            <j-tabs-pane label="标签一" name="one">我是标签一</j-tabs-pane>
+            <j-tabs-pane label="标签二" name="two">我是标签二</j-tabs-pane>
+            <j-tabs-pane label="标签三" name="three">我是标签三</j-tabs-pane>
+        </j-tabs>
+        <j-tabs value="one" ref="tab_disable">
+            <j-tabs-pane label="标签一" name="one">我是标签一</j-tabs-pane>
+            <j-tabs-pane label="标签二" name="two" :is-disabled="true">我是标签二</j-tabs-pane>
+            <j-tabs-pane label="标签三" name="three">我是标签三</j-tabs-pane>
+        </j-tabs>
+        <j-tabs value="one" type="card" class-name="custom-class" ref="tab_custom">
+            <j-tabs-pane label="标签一" name="one">我是标签一</j-tabs-pane>
+            <j-tabs-pane label="标签二" name="two">我是标签二</j-tabs-pane>
+            <j-tabs-pane label="标签三" name="three">我是标签三</j-tabs-pane>
+        </j-tabs>
+        <j-tabs value="one" :tag-height="80" ref="tab_height">
+            <j-tabs-pane label="标签一" name="one">我是标签一</j-tabs-pane>
+            <j-tabs-pane label="标签二" name="two">我是标签二</j-tabs-pane>
+            <j-tabs-pane label="标签三" name="three">我是标签三</j-tabs-pane>
+        </j-tabs>
+        <div style="width: 300px">
+            <j-tabs type="card" :tag-height="60" ref="tab_add">
+                <j-icon type="plus2" slot="add" @click.native="add"></j-icon>
+                <j-tabs-pane v-for="item in paneList" :label="item.label" :name="item.name" :key="item.name">{{item.content}}</j-tabs-pane>
+            </j-tabs>
+        </div>
+        <j-tabs :data="dataList" :value="currentView" @on-click="handle" ref="tab_dynamic">
+            <component :is="currentView"></component>
+        </j-tabs>
+       
+    </div>
+</div>

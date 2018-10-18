@@ -1,0 +1,29 @@
+$prefix-cls-rate: #{$prefix-cls}-rate;
+
+.#{$prefix-cls-rate} {
+    height: 20px;
+    line-height: 1;
+    &-item {
+        display: inline-block;
+        position: relative;
+        font-size: 0;
+        vertical-align: middle;
+        &-disabled {
+            cursor: default;
+        }
+        &-enabled {
+            cursor: pointer;
+        }
+    }
+    &-hover {
+        transform: scale(1.15);
+    }
+    &-icon {
+        display: inline-block;
+        position: relative;
+        // font-size: 18px;
+        margin-right: 6px;
+        color: #CED7E2;
+        transition: 0.3s;
+    }
+}

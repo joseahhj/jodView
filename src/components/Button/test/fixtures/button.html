@@ -1,0 +1,42 @@
+<div id="app">
+    <div class="row">
+        <div v-for="size in sizes" :key="size">
+            <j-button :size="size" :ref="`btn${size ? `-${size}` : ''}`"></j-button>
+        </div>
+        <div v-for="type in types" :key="type">
+            <j-button :type="type" :ref="`btn${type ? `-${type}` : ''}`"></j-button>
+        </div>
+        <div v-for="type in types" :key="`outline-${type}`">
+            <j-button :type="type" :ref="`btn-outline${type ? `-${type}` : ''}`" is-outline></j-button>
+        </div>
+        <div v-for="type in types" :key="`linear-${type}`" v-if="type!='linear' && type!='linear-red'">
+            <j-button :type="type" :ref="`btn-linear${type ? `-${type}` : ''}`" is-gradient></j-button>
+        </div>
+
+        <div v-for="shape in shapes" :key="shape">
+            <j-button :shape="shape" :ref="`btn${shape ? `-${shape}` : ''}`"></j-button>
+        </div>
+        <div>
+            <j-button size="large" ref="btn_pressed" :value="btnText"></j-button>
+        </div>
+        <div>
+            <j-button type=""></j-button>
+            <j-button native-type=""></j-button>
+        </div>
+        <div>
+            <j-button size="small" ref="btn_icon" :icon="icon" is-loading></j-button>
+        </div>
+        <div>
+            <j-button size="small" ref="btn_icon" :icon="{type:'cancel',fontSize:12}" is-loading></j-button>
+        </div>
+        <div>
+            <j-button ref="btn_loading" is-loading @click="handleClick">加载样式</j-button>
+        </div>
+        <div>
+            <j-button ref="btn_click" @click="handleClick">点击回调</j-button>
+        </div>
+        <div>
+            <j-button ref="btn_block_disabled" @click="handleClick" is-disabled>不可点击</j-button>
+        </div>
+    </div>
+</div>

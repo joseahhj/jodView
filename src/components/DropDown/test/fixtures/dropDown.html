@@ -1,0 +1,108 @@
+<div id="app">
+    <j-dropdown placement="bottom" style="margin-left:400px" ref="basic" :popover-width="100">
+        <j-button type="text">
+            下拉菜单-click
+            <j-icon type="angle-down"></j-icon>
+        </j-button>
+        <template slot="dropdown">
+            <j-dropdown-item is-disabled>1232312323123231232312323</j-dropdown-item>
+            <j-dropdown-item>1232312323123231232312323</j-dropdown-item>
+            <j-dropdown-item is-divided>1232312323123231232312323</j-dropdown-item>
+        </template>
+    </j-dropdown>
+    <j-dropdown ref="triggerClick" trigger="click">
+        <j-button type="info">
+            下拉菜单-hover
+            <j-icon type="angle-down"></j-icon>
+        </j-button>
+        <template slot="dropdown">
+            <j-dropdown-item>12323下拉菜单-hover</j-dropdown-item>
+            <j-dropdown-item>下拉菜单-hover</j-dropdown-item>
+        </template>
+    </j-dropdown>
+    <j-dropdown ref="triggerClickDis" @on-changed="disChangeHandler">
+        <j-button type="info">
+            下拉菜单-click
+            <j-icon type="angle-down"></j-icon>
+        </j-button>
+        <template slot="dropdown">
+            <j-dropdown-item is-disabled ref="click_disable">12323下拉菜单-hover</j-dropdown-item>
+            <j-dropdown-item>下拉菜单-hover</j-dropdown-item>
+        </template>
+    </j-dropdown>
+    <j-dropdown ref="isDisable" :is-disabled="isDisabled" placement="top">
+        <j-button type="info">
+            下拉菜单-hover
+            <j-icon type="angle-down"></j-icon>
+        </j-button>
+        <template slot="dropdown">
+            <j-dropdown-item>12323下拉菜单-hover</j-dropdown-item>
+            <j-dropdown-item>下拉菜单-hover</j-dropdown-item>
+        </template>
+    </j-dropdown>
+    <j-dropdown is-hide-click ref="hide_click" trigger="click">
+        <j-button type="info">
+            下拉菜单-hover
+            <j-icon type="angle-down"></j-icon>
+        </j-button>
+        <template slot="dropdown">
+            <j-dropdown-item ref="down_item">12323下拉菜单-hover</j-dropdown-item>
+            <j-dropdown-item>下拉菜单-hover</j-dropdown-item>
+        </template>
+    </j-dropdown>
+    <j-dropdown ref="click_item" @on-change="changeHandler">
+        <j-button type="text">
+            默认选中某一条
+            <j-icon type="angle-down"></j-icon>
+        </j-button>
+        <div slot="dropdown">
+            <j-dropdown-item ref="click_select_item" label="第一条">1232312323123231232312323</j-dropdown-item>
+            <j-dropdown-item is-selected ref="selected_item">我是默认选中的</j-dropdown-item>
+            <j-dropdown-item>qwewe</j-dropdown-item>
+        </div>
+    </j-dropdown>
+    <j-dropdown trigger="click" placement="bottom" style="margin-left:400px" ref="layer1">
+        <j-button type="text">
+            下拉菜单-click
+            <j-icon type="angle-down"></j-icon>
+        </j-button>
+        <template slot="dropdown">
+            <j-dropdown-item is-disabled>1232312323123231232312323</j-dropdown-item>
+            <j-dropdown-item>1232312323123231232312323</j-dropdown-item>
+            <j-dropdown :is-append-to-body="false" trigger="click" placement="right" >
+                <j-dropdown-item ref="layer2">
+                    下拉菜单-click111
+                    <j-icon type="angle-right"></j-icon>
+                </j-dropdown-item>
+                <template slot="dropdown">
+                    <j-dropdown-item ref="layer3">12323下拉菜单-hover</j-dropdown-item>
+                    <j-dropdown-item>下拉菜单-hover</j-dropdown-item>
+                    
+                </template>
+    </j-dropdown>
+    </template>
+    </j-dropdown>
+    <j-dropdown :is-manual="isManual" trigger="custom" style="margin-left:300px" ref="custom">
+        <j-button type="text">
+            手动关闭
+            <j-icon type="angle-down"></j-icon>
+        </j-button>
+        <template slot="dropdown">
+        <j-dropdown-item>1232312323123231232312323</j-dropdown-item>
+        <j-dropdown-item ref="customLi">1232312323123231232312323</j-dropdown-item>
+        <j-dropdown-item>1232312323123231232312323</j-dropdown-item>
+        <j-dropdown :is-append-to-body="false" placement="right">
+            <j-dropdown-item ref="customNest">
+                下拉菜单-click111
+                <j-icon type="angle-right"></j-icon>
+            </j-dropdown-item>
+            <template slot="dropdown">
+                <j-dropdown-item ref="customNestLi">12323下拉菜单-hover</j-dropdown-item>
+                <j-dropdown-item>下拉菜单-hover</j-dropdown-item>
+
+            </template>
+            </j-dropdown>
+            <j-button>点击关闭</j-button>
+            </template>
+        </j-dropdown>
+</div>

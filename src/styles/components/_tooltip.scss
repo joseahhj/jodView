@@ -1,0 +1,186 @@
+// Tooltip
+// --------------------------------------------------
+
+$prefix-cls-tooltip: #{$prefix-cls}-tooltip;
+$prefix-cls-popover: #{$prefix-cls}-popover;
+//** Tooltip max width
+$tooltip-min-width: 100px;
+//** Tooltip text color
+$tooltip-dark-color: #fff;
+$tooltip-light-color: #000;
+//** Tooltip background color
+$tooltip-dark-bg: #000;
+$tooltip-light-bg: #fff;
+$tooltip-light-border: #ccc;
+$tooltip-opacity: .9;
+
+//** Tooltip arrow width
+$tooltip-arrow-width: 6px;
+$tooltip-distance: $tooltip-arrow-width - 1 + 4;
+//** Tooltip arrow color
+$tooltip-arrow-dark-color: $tooltip-dark-bg;
+$tooltip-arrow-light-color: $tooltip-light-bg;
+
+.#{$prefix-cls-tooltip} {
+  display: inline-block;
+  margin: 0;
+  // Our parent element can be arbitrary since tooltips are by default inserted as a sibling of their target element.
+  // So reset our font and text properties to avoid inheriting weird values.
+  font-size: $font-size-normal;
+  opacity: $tooltip-opacity;
+}
+
+.#{$prefix-cls-tooltip}-poper {
+    display: block;
+    background-color: transparent;
+    box-sizing: border-box;
+    border-radius: 4px;
+    position: absolute;
+    font-size: $font-size-normal;
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.05);
+    .#{$prefix-cls-tooltip}-light-arrow-border {
+        border-style:solid;
+        border-color:transparent;
+        position:absolute;
+    }
+
+    &[x-placement^="top"] {
+        //padding: $popover-arrow-width 0 $popover-distance 0;
+        margin-bottom:10px
+    }
+    &[x-placement^="right"] {
+        //padding: 0 $popover-arrow-width 0 $popover-distance;
+        margin-left:10px
+    }
+    &[x-placement^="bottom"] {
+        //padding: $popover-distance 0 $popover-arrow-width 0;
+        margin-top:10px
+    }
+    &[x-placement^="left"] {
+        //padding: 0 $popover-distance 0 $popover-arrow-width;
+        margin-right:10px
+    }
+
+    &[x-placement^="top"] .#{$prefix-cls-tooltip}-arrow {
+        bottom: -5px;
+        border-width: $tooltip-arrow-width $tooltip-arrow-width 0;
+    }
+    
+    &[x-placement^="top"] .#{$prefix-cls-tooltip}-dark-arrow {
+        border-top-color: $tooltip-dark-bg;
+    }
+    &[x-placement^="top"] .#{$prefix-cls-tooltip}-light-arrow {
+        border-top-color: $gray-light1;
+
+        .#{$prefix-cls-tooltip}-light-arrow-border{
+            border-width:$tooltip-arrow-width - 1 $tooltip-arrow-width - 1 0;
+            border-top-color:$tooltip-light-bg;
+            left:-$tooltip-arrow-width + 1;
+            top:-6px;
+        }
+    }
+    &[x-placement^="right"] .#{$prefix-cls-tooltip}-arrow {
+        left: -5px;
+        border-width: $tooltip-arrow-width $tooltip-arrow-width $tooltip-arrow-width 0;
+    }
+
+    &[x-placement^="right"] .#{$prefix-cls-tooltip}-dark-arrow {
+        border-right-color: $tooltip-dark-bg;
+    }
+    &[x-placement^="right"] .#{$prefix-cls-tooltip}-light-arrow {
+        border-right-color: $gray-light1;
+
+        .#{$prefix-cls-tooltip}-light-arrow-border{
+            border-width:$tooltip-arrow-width - 1 $tooltip-arrow-width - 1 $tooltip-arrow-width - 1 0;
+            border-right-color:$tooltip-light-bg;
+            left:-$tooltip-arrow-width + 7;
+            top:-5px;
+        }
+    }
+    &[x-placement^="left"] .#{$prefix-cls-tooltip}-arrow {
+        right: -5px;
+        border-width: $tooltip-arrow-width 0 $tooltip-arrow-width $tooltip-arrow-width;
+    }
+    
+    &[x-placement^="left"] .#{$prefix-cls-tooltip}-dark-arrow {
+        border-left-color: $tooltip-dark-bg;
+    }
+    &[x-placement^="left"] .#{$prefix-cls-tooltip}-light-arrow {
+        border-left-color: $gray-light1;
+
+        .#{$prefix-cls-tooltip}-light-arrow-border{
+            border-width:$tooltip-arrow-width - 1 0 $tooltip-arrow-width - 1 $tooltip-arrow-width - 1;
+            border-left-color:$tooltip-light-bg;
+            left:-$tooltip-arrow-width - 1;
+            top:-5px;
+        }
+    }
+    &[x-placement^="bottom"] .#{$prefix-cls-tooltip}-arrow {
+        top: -5px ;
+        border-width: 0 $tooltip-arrow-width $tooltip-arrow-width;
+
+    }
+    
+    &[x-placement^="bottom"] .#{$prefix-cls-tooltip}-dark-arrow {
+        border-bottom-color: $tooltip-dark-bg;
+    }
+    &[x-placement^="bottom"] .#{$prefix-cls-tooltip}-light-arrow {
+        border-bottom-color: $gray-light1;
+
+        .#{$prefix-cls-tooltip}-light-arrow-border{
+            border-width:0 $tooltip-arrow-width - 1 $tooltip-arrow-width - 1;
+            border-bottom-color:$popover-light-bg;
+            left:-$tooltip-arrow-width + 1;
+            top:2px;
+        }
+    }
+}
+
+
+
+// Wrapper for the tooltip content
+.#{$prefix-cls-tooltip}-inner {
+    min-width: $tooltip-min-width;
+    padding: 8px 16px;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: $border-radius-default;
+    word-break: break-all;
+}
+
+.#{$prefix-cls-tooltip}-dark-inner {
+    color: $tooltip-dark-color;
+    background-color: $tooltip-dark-bg;
+}
+
+.#{$prefix-cls-tooltip}-light-inner {
+    color: $gray-dark;
+    background-color: $tooltip-light-bg;
+    border: 1px solid $gray-light1;
+}
+
+.#{$prefix-cls-tooltip}-arrow {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

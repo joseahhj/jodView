@@ -1,0 +1,12 @@
+<div id="app">
+    <j-switch v-model="value" ref="basic" ></j-switch>
+    <j-switch :value="value" ref="watchValue" ></j-switch>
+    <j-switch is-disabled ref="disabled" ></j-switch>
+    <j-switch :size="size" :ref="`switch${size ? `-${size}` : ''}`" v-for="size in sizes" :key="size"></j-switch>
+    <j-switch v-model="valueText" :open-value="'开'" :close-value="'关'" @on-change="onChange" ref="customValue"  ></j-switch>
+    <j-switch v-model="value" :active-color="'red'" :inactive-color="'blue'" ref="customColor" ></j-switch>
+    <j-switch v-model="value" size="large" ref="customSlot">
+        <span slot="open">开</span>
+        <span slot="close">关</span>
+    </j-switch>
+</div>

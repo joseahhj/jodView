@@ -1,0 +1,150 @@
+$prefix-cls-table: #{$prefix-cls}-table;
+$prefix-cls-radio: #{$prefix-cls}-radio;
+$prefix-cls-checkbox: #{$prefix-cls}-checkbox;
+$head-border-color: #ccc;
+
+.#{$prefix-cls-table} {
+	width: 100%; 
+  	border-collapse: collapse; 
+  	font-size: #{$font-size-small};
+  	/*overflow-x: auto;*/
+  	overflow: hidden;
+
+  	table {
+  		width: 100%;
+  	}
+
+  	th, td {
+	    text-align: left;
+	    /*white-space: nowrap;*/
+	    padding: 12px 16px;
+	    color: $gray;
+	    word-break: break-all;
+	    font-size: 14px;
+	}
+	th {
+		font-weight: normal;
+		border: 1px solid $gray-lighter;
+		background: #F5F5F5;
+		border-bottom:none;
+	}
+
+	td {
+		border: 1px solid $gray-lighter;
+		padding: 21px 16px;
+	}
+
+	table &-selection {
+		border-right: none;
+		padding-right: 10px;
+		text-align: center;
+	}
+
+	tbody tr:hover, &-tr-hover {
+		td{
+			background: #FBFBFB;
+		}
+	}
+
+	&-content {
+		overflow: auto;
+		
+		table {
+			background: #FFF;
+		}
+
+		.#{$prefix-cls-radio}-label {
+			display: none;
+		}
+
+		&-nodata {
+			min-height: 200px;
+    		border: 1px solid $gray-lighter;
+			tbody tr:hover{
+				td{
+					background: none;
+				}
+			}
+			td {
+				text-align: center;
+				border: none;
+			}
+		}
+	}
+	&-header {
+		width: 100%;
+		overflow: hidden;
+		position: relative;
+
+		&-with-fixed-top {
+			z-index: 10000;
+			background: #fff;
+		}
+	}
+
+	&-sort i {
+		padding: 0 5px;
+		cursor: pointer;
+	}
+
+	&-filter {
+		cursor: pointer;
+		&-content {
+			text-align: left;
+
+			.#{$prefix-cls-checkbox}-wrapper {
+				font-size: #{$font-size-default};
+			}
+			
+			&-footer {
+				margin-top: 10px;
+				/*border-top: 1px solid #{$gray};*/
+			}
+		}
+
+	}
+
+	&-expand-selection {
+		cursor: pointer;
+	}
+
+	&-fixed-left {
+		position: absolute;
+	    top: 0;
+	    left: 0;
+	    overflow-x: hidden;
+	    overflow-y: hidden;
+	    box-shadow: 3px 0 10px rgba(0,0,0,.12);
+	    z-index: 3;
+
+	    .#{$prefix-cls-table}-content {
+	    	overflow-x: hidden;
+	    }
+	}
+
+	&-fixed-right {
+		position: absolute;
+	    top: 0;
+	    right: 0;
+	    left: auto;
+	    overflow-x: hidden;
+	    overflow-y: hidden;
+	    box-shadow: -3px 0 10px rgba(0,0,0,.12);
+	    .#{$prefix-cls-table}-header, .#{$prefix-cls-table}-content {
+	    	position: absolute;
+		    right: 0;
+		    top: 0;
+		    left: auto;
+		    z-index: 3;
+	    }
+
+	    .#{$prefix-cls-table}-header {
+	    	width: initial;
+	    }
+
+	}
+}
+
+.#{$prefix-cls-table}-fixed {
+	position: relative;
+}

@@ -1,0 +1,134 @@
+// Switch
+// --------------------------------------------------
+$prefix-cls-switch: #{$prefix-cls}-switch;
+
+.#{$prefix-cls-switch} {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: middle;
+    background-color: $switch-default-bg;
+    border-radius: $switch-default-height;
+    cursor: pointer;
+    user-select: none;
+    @include switch-size($switch-default-width, $switch-default-height);
+    @include transition($transition-base);
+    &-content {
+        position: absolute;
+        left: $switch-default-height;
+        width: $switch-default-checked-left - $switch-default-left;
+        line-height: $switch-default-height;
+        text-align: right;
+        color: $switch-text-color;
+        font-size: $font-size-default;
+        font-weight: normal;
+        @include transition($transition-base);
+    }
+    &:after {
+        position: absolute;
+        left: 0;
+        width: $switch-default-circle;
+        height: $switch-default-circle;
+        background-color: $switch-circle-bg;
+        // border:1px solid $switch-open-bg;
+        border-width: $switch-default-left * 0.5;
+        border-radius: 100%;
+        content: "";
+        cursor: pointer;
+        border: 1px solid #DDDDDD;
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.10);
+        @include transition($transition-base);
+    }
+    &.#{$prefix-cls-switch}-checked {
+        background-color: $switch-open-bg;
+        .#{$prefix-cls-switch}-content {
+            left: $switch-default-left;
+        }
+    
+    }
+    &-out{
+        &:after {
+            top: -4px;
+        }
+        &.#{$prefix-cls-switch}-checked {
+            &:after {
+                left: $switch-default-width - $switch-default-circle;
+                border-color:$switch-open-bg;
+            }
+        }
+
+        &.#{$prefix-cls-switch}-disabled {
+            &.#{$prefix-cls-switch}-checked {
+                &:after {
+                    border-color: lighten($switch-open-bg, 30%);
+                    background: $switch-circle-bg;
+                }
+            }
+        }
+    }
+    &-inner{
+        width:28px;
+        &:after {
+            top:2px;
+            left:2px;
+            border:none;
+            width:$switch-default-circle/2;
+            height:$switch-default-circle/2; //left: $switch-default-width - $switch-default-circle/2)-5px;
+        }
+        &.#{$prefix-cls-switch}-checked {
+            &:after {
+                left: 28px - ($switch-default-circle/2)-2px;
+                box-shadow:0 0 0 0;
+                border:none;
+            }
+        }
+    }
+    &-disabled {
+        background-color: $switch-disabled-bg;
+        cursor: no-drop;
+        &:after {
+            background-color: $switch-disabled-circle-bg;
+            border-color: $switch-disabled-circle-bg;
+            cursor: no-drop;
+        }
+        &.#{$prefix-cls-switch}-checked {
+            background-color: lighten($switch-open-bg, 30%);
+            &:after {
+                background: $switch-circle-bg;
+            }
+        }
+    }
+    // Switch with type of large
+    // ------------------------ start ---------------------
+    &.#{$prefix-cls-switch}-large {
+        @include switch-size($switch-large-width, $switch-large-height);
+
+        &:after {
+            top: $switch-large-left * 0.5;
+            left: $switch-large-left * 0.5;
+            // border-width: $switch-large-left * 0.5;
+            width: $switch-large-circle;
+            height: $switch-large-circle;
+            border:none;
+        }
+
+        .#{$prefix-cls-switch}-content {
+            left: $switch-large-height;
+            width: $switch-large-checked-left - $switch-large-left;
+            line-height: $switch-large-height;
+            font-weight: bold;
+            text-align: right;
+        }
+
+        &.#{$prefix-cls-switch}-checked {
+            .#{$prefix-cls-switch}-content {
+                left: $switch-large-left;
+                text-align: left;
+            }
+
+            &:after {
+                left: $switch-large-checked-left + $switch-large-left * 0.5;
+            }
+        }
+    }
+}

@@ -1,0 +1,60 @@
+<div id="app">
+    <j-row ref="basic">
+        <j-col span="12">col-12</j-col>
+        <j-col span="22">col-22</j-col>
+        <j-col span="6">col-6</j-col>
+    </j-row>
+    <j-row>
+        <j-col :span="val" v-for="val in 24" ref="cols" :key="val">col-{{val}}</j-col>
+    </j-row>
+
+    <j-row>
+        <j-col :sm="{ span: 7, offset: 1 }" :lg="{ span: 6, offset: 2 }">col-1</j-col>
+        <j-col :sm="{ span: 7, offset: 1 }" :lg="{ span: 6, offset: 2 }">col-2</j-col>
+        <j-col :sm="{ span: 7, offset: 1 }" :lg="{ span: 6, offset: 2 }">col-3</j-col>
+    </j-row>
+    <j-row>
+        <j-col :sm="7">col-1</j-col>
+        <j-col :sm="7">col-2</j-col>
+        <j-col :sm="7">col-3</j-col>
+    </j-row>
+    <j-row :gutter="10">
+        <j-col span="6">
+            <div>col-6</div>
+        </j-col>
+        <j-col span="6">
+            <div>col-6</div>
+        </j-col>
+        <j-col span="6">
+            <div>col-6</div>
+        </j-col>
+        <j-col span="6">
+            <div>col-6</div>
+        </j-col>
+    </j-row>
+    <j-row type="flex" justify="center" align="bottom">
+        <j-col span="4">
+            <p style="height: 80px">col-4</p>
+        </j-col>
+        <j-col span="4">
+            <p style="height: 30px">col-4</p>
+        </j-col>
+        <j-col span="4">
+            <p style="height: 100px">col-4</p>
+        </j-col>
+        <j-col span="4">
+            <p style="height: 60px">col-4</p>
+        </j-col>
+    </j-row>
+    <j-row type="flex">
+        <j-col span="6" order="4">1 | order-4</j-col>
+        <j-col span="6" order="3">2 | order-3</j-col>
+        <j-col span="6" order="2">3 | order-2</j-col>
+        <j-col span="6" order="1">4 | order-1</j-col>
+    </j-row>
+    <j-row ref="gutter_change" :gutter="gutter">
+        <j-col span="8" ref="render_gutter">col-8</j-col>
+        <j-col span="8" offset="8">col-8 | offset-8</j-col>
+
+    </j-row>
+</div>

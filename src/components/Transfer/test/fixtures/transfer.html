@@ -1,0 +1,88 @@
+<div id="app">
+    <div style="width:500px">
+        <j-transfer
+            ref="basic"
+            @on-change="handleChange"
+            :data="data1">
+        </j-transfer>
+    </div>
+
+    <div style="width:500px">
+        <j-transfer
+            ref="footer"
+            is-show-footer
+            :panel-titles="titles"
+            :button-texts="buttons"
+            @on-change="handleChange"
+            :data="data1">
+            <div slot="left-footer">
+                <div class="my-left-footer">left</div>
+            </div>
+            <div slot="right-footer">
+                <div class="my-right-footer">right</div>
+            </div>
+        </j-transfer>
+    </div>
+
+    <div style="width:500px">
+        <j-transfer
+            ref="search"
+            is-filterable
+            :format-selected="format"
+            filter-placeholder="关键词"
+            empty-text="无相关内容"
+            :on-filter="onFilter"
+            :button-texts="['添加','删除']"
+            :data="data2">
+        </j-transfer>
+    </div>
+
+    <div style="width:500px">
+        <j-transfer
+            ref="selected"
+            :left-default-selected="[1,2]"
+            :right-default-selected="[3]"
+            :button-texts="['添加','删除']"
+            :value="value1"
+            :data="data2">
+            <template slot-scope="{option}">
+                {{option.label}}-{{option.en}}
+            </template>
+        </j-transfer>
+    </div>
+
+    <div style="width:500px">
+        <j-transfer
+            is-filterable
+            ref="fields"
+            :value="value1"
+            :custom-field="fields"
+            :button-texts="['添加','删除']"
+            :data="data3">
+        </j-transfer>
+    </div>
+
+    <div style="width:500px">
+        <j-transfer
+            is-filterable
+            ref="order"
+            :left-default-selected="[1,2]"
+            :value="value1"
+            :button-texts="['添加','删除']"
+            target-order="unshift"
+            :custom-field="{}"
+            @on-change="handleChange"
+            :data="data4">
+        </j-transfer>
+    </div>
+
+    <div style="width:500px">
+        <j-transfer
+            is-filterable
+            ref="empty"
+            :button-texts="['添加','删除']"
+            target-order="unshift"
+            @on-change="handleChange">
+        </j-transfer>
+    </div>
+</div>

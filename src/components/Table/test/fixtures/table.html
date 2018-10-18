@@ -1,0 +1,57 @@
+<div  id="app">
+	<j-table
+        ref="checkboxTable"
+        :columns="columns" 
+        :data="data" 
+        :row-selection="rowSelection" 
+        row-key="id"
+        :default-checked-keys="[1]"
+        @on-sort-change="sortChange"
+        :span-method="spanMethod">
+    </j-table>
+    <j-table
+        ref="mergeTable"
+        :columns="columns" 
+        :data="data" 
+        row-key="id"
+        :span-method="spanMethod">
+    </j-table>
+    <j-table
+        ref="noDataTable"
+        :columns="columns" 
+        :data="noData">
+    </j-table>
+    <j-table
+        ref="expandTable"
+        :columns="columns" 
+        :data="data" 
+        :row-selection="expandSelection" 
+        row-key="id">
+        <template slot="expandDataPanel" slot-scope="props">
+            <span>{{ '当前操作行：' + props.rowIndex}}</span>
+            <br/>
+            <br/>
+            <j-row>
+                <j-col span="24">{{ '名字:' + props.row.name}}</j-col>
+                <j-col span="24">{{ '年龄:' + props.row.age}}</j-col>
+                <j-col span="24">{{ '地址:' + props.row.address}}</j-col>
+            </j-row>
+        </template>
+    </j-table>
+     <j-table
+        :columns="columns"
+        :data="data"
+        ref="customRenderTable" >
+        <template slot="header-name" slot-scope="props">
+            <j-icon type="user"></j-icon>
+            <span>{{ props.column.title }}</span>
+        </template>
+        <template slot="name" slot-scope="props">
+            <j-icon type="user"></j-icon>
+            <span>{{ props.row.name }}</span>
+        </template>
+        <template slot="address" slot-scope="props">
+            <span>{{ '住址：' + props.row.address}}</span>
+        </template>
+    </j-table>
+</div>

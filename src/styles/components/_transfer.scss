@@ -1,0 +1,133 @@
+$transfer-prefix-cls: jad-transfer;
+$jad-transfer-panel: jad-transfer-panel;
+
+.#{$transfer-prefix-cls} {
+    position: relative;
+    font-size: 12px;
+    &.has-search {
+        .#{$jad-transfer-panel} {
+            &-body {
+                padding-top: 30px;
+            }
+        }
+    }
+    &-button {
+        line-height: 1;
+        display: block;
+        min-width:32px;
+        &:first-child{
+            margin-bottom: 10px;
+        }
+        &-text{
+            vertical-align: middle;
+        }
+        span{
+            font-size: 12px;
+        }
+        i {
+            line-height: 1;
+            display: inline-block;
+        }
+    }
+    &-buttons {
+        display: inline-block;
+        vertical-align: middle;
+        padding: 0 15px;
+    }
+}
+
+.#{$jad-transfer-panel} {
+    width: 200px;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    &-header {
+        padding: 0 10px;
+        position: relative;
+        height: 40px;
+        line-height: 40px;
+        border-bottom: 1px solid #ddd;
+        background-color: #f5f5f5;
+        &-selected {
+            position: absolute;
+            right: 10px;
+            top: 0;
+            color: #999;
+        }
+    }
+    &-body {
+        height: 220px;
+        position: relative;
+        &-search {
+            width: 100%;
+            border-bottom: 1px solid #eee;
+            position: absolute;
+            left: 0;
+            top: 0;
+            &-input {
+                width: 100%;
+                border: none;
+                line-height: 26px;
+                .jad-input-inner{
+                    border: none;
+                }
+            }
+            i {
+                color: #ccc;
+            }
+        }
+    }
+    &-footer{
+        height: 40px;
+        border-top: 1px solid #ddd;
+
+    }
+    &-content {
+        height: 100%;
+        overflow: auto;
+    }
+    &-item {
+        padding: 5px 10px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        -webkit-transition: all .3s;
+        transition: all .3s;
+        position: relative;
+        width: 100%;
+        &-arrow {
+            font-size: 14px;
+            position: absolute;
+            right: 10px;
+            top: 5px;
+        }
+        &:hover {
+            background-color: #f4f8fb;
+        }
+    }
+    &-notFound {
+        position: absolute;
+        top: 50%;
+        text-align: center;
+        width: 100%;
+        transform: translateY(-50%);
+    }
+}
+
+.item {
+    &-enter {
+        background-color: #f4f8fb;
+        &-active {
+            transition: background-color .5s;
+        }
+    }
+    &-leave {
+        &-active {
+            opacity: 0;
+        }
+    }
+    &-move {
+        transition: all .3s;
+    }
+}

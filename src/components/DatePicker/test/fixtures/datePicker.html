@@ -1,0 +1,131 @@
+<div id="app">
+    <p>type类型</p>
+    <j-date-picker 
+        placeholder="选择日期" 
+        style="width: 200px"
+        :value="value4" 
+        :shortcuts="shortcuts2"
+        popper-class-name="basic_single_test"
+        ref="single"></j-date-picker>
+    <j-date-picker 
+        @on-change="selectedSingleDate"
+        popper-class-name="click_single_test"
+        ref="click_single" 
+        :is-clearable="isClearable"></j-date-picker>
+    <j-date-picker 
+        :type="cType"
+        popper-class-name="basic_input_test"
+        is-show-confirm
+        is-show-clear
+        ref="basic_input"></j-date-picker>
+    <j-date-picker 
+        :type="dateType" 
+        :options="options3"
+        popper-class-name="change_type_test"
+        ref="changeType"></j-date-picker>
+    
+    <j-date-picker 
+        type="week" 
+        placeholder="选择日期" 
+        style="width: 230px" 
+        v-model="value2"
+        is-show-week-num
+        ref="week"></j-date-picker>
+    <j-date-picker 
+        type="year" 
+        placeholder="选择年" 
+        style="width: 200px" 
+        :options="options4"
+        popper-class-name="change_year_test"
+        ref="date_year"></j-date-picker>
+    <j-date-picker 
+        type="month" 
+        style="width: 200px" 
+        :options="options4"
+        popper-class-name="change_month_test"
+        ref="date_month"></j-date-picker>
+    <j-date-picker 
+        type="daterange" 
+        placeholder="手动触发" 
+        :value="innitDate"
+        style="width: 300px" 
+        :is-manual="isManual" 
+        popper-class-name="change_manual_test"
+        ref="manual_date">
+        <j-button type="linear" @click="isManual=true" ref="clickManual">
+            手动触发 {{innitDate}}
+        </j-button>
+        <div slot="customContent" style="border-top:1px solid #ddd;font-size:12px;padding:10px">
+        <j-button type="success" @click="isManual=false" ref="clickManualSure">
+            确定
+        </j-button>
+        <j-button type="linear" @click="clear" ref="clickManualBtnClear">
+            取消
+        </j-button>
+        我是自定义
+        </div>
+    </j-date-picker>
+    <p>isRefBtn</p>
+    <j-date-picker 
+
+        :value="value1" 
+        placeholder="选择日期" 
+        style="width: 100px" 
+        is-ref-btn></j-date-picker>
+    <j-date-picker 
+        type="daterange" 
+        placeholder="选择日期" 
+        
+        popper-class-name="click_daterange_test"
+        ref="click_daterange"></j-date-picker>
+    <j-time-picker 
+        type="time" 
+        key="changeSingleTime"
+        :disabled-hours="[1,5,10]"
+        :disabled-minutes="[0,10,20]" 
+        :disabled-seconds="[0,10,20]" 
+        hide-disabled-options
+        popper-class-name="change_single_time_test"
+        ref="changeSingleTime"></j-time-picker>
+    <p>showWeek</p>
+    <j-date-picker 
+        type="week" 
+        placeholder="按周选择" 
+        style="width: 230px" 
+        :value="[new Date(),new Date()]"
+        ref="weekNum" 
+        :is-show-week-num="true"></j-date-picker>
+    <p>isLinked</p>
+    <j-date-picker 
+        type="datetimerange" 
+        format="yyyy-MM-dd HH:mm" 
+        placeholder="选择日期和时间（不含秒）" 
+        style="width: 300px" 
+        :is-show-confirm="true" 
+        :is-linked="false">
+    <j-time-picker 
+        :type="timeType" 
+        placeholder="选择时间" 
+        style="width: 168px"
+        key="changeTypeTime"
+        :disabled-hours="[1,5,10]"
+        :disabled-minutes="[0,10,20]" 
+        :disabled-seconds="[0,10,20]" 
+        hide-disabled-options
+        popper-class-name="change_type_time_test"
+        ref="changeTypeTime"></j-time-picker>
+
+    <j-time-picker 
+        type="timerange" 
+        placeholder="选择时间" 
+        style="width: 168px" 
+        :value="[new Date(),new Date()]"></j-time-picker>
+    <j-time-picker 
+        type="timerange" 
+        placeholder="选择时间"></j-time-picker>
+    <j-time-picker 
+        type="time" 
+        placeholder="选择时间" 
+        style="width: 168px"
+        value="10:00:00"></j-time-picker>
+</div>

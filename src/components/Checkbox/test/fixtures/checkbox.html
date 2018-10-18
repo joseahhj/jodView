@@ -1,0 +1,13 @@
+<div  id="app">
+	<j-checkbox  v-model="apple" ref="basic">
+        苹果 
+    </j-checkbox>
+    <j-checkbox v-model="apple" is-disabled @on-change="change" ref="disabled" >
+        苹果
+    </j-checkbox>
+	<j-checkbox v-model="apple" @on-change="change" ref="change">
+		苹果
+	</j-checkbox>
+    <j-checkbox :value="apple" ref="basicValue"></j-checkbox>
+    <j-checkbox v-model="unapple" ref="basicNoValue"></j-checkbox>
+</div>

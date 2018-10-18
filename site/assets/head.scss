@@ -1,0 +1,118 @@
+$header-height: 80px;
+
+.st-header {
+    // transition: opacity 0.5s;
+    background: #FFFFFF;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.04);
+    height: #{$header-height};
+    width: 100%;
+    min-width: 1082px;
+    padding: 0 40px;
+    position: fixed;
+    top: 0;
+    z-index:100;
+    &.home-nav-bottom {
+        background: rgba(255, 255, 255, 0.9);
+        border-bottom-color: #EBEDEE;
+        .search {
+            border-left-color: #EBEDEE;
+        }
+        a {
+            color: #666;
+        }
+    }
+    .logoBox{
+        font-size: 0
+    }
+}
+
+.logo-wrap{
+    height: #{$header-height};
+    line-height: #{$header-height};
+}
+
+.logoBg {
+    display:inline-block;
+    width:94px;
+    height:20px;
+    background:url('./imgs/logo.png') 0 0 no-repeat;
+    background-size:100% auto;
+    vertical-align: middle;
+}
+.s-menu-horizontal {
+    text-align:center;
+    li {
+        display: inline-block;
+        color: #666;
+        padding: 25px 0 10px;
+        margin: 0 40px
+    }
+}
+.s-menu-item {
+    cursor: pointer;
+    color: #666;
+    font-size: 14px;
+    position: relative;
+    &:hover{
+        color: #E1251B;
+    }
+    .s-menu-bot{
+       position: absolute; 
+       width:100%;
+       height: 2px;
+       background: #fff;
+       border-radius: 1px;
+       bottom:0;
+    }
+    &.router-link-active { 
+        color: #E1251B;
+        font-weight:bold;
+        .s-menu-bot{
+           background: #E1251B;
+           display: block;
+        }
+    }
+}
+.searchIpt{
+    border:none;
+    width:100%;
+    .jad-input-inner .jad-icon{
+        color: rgba(0,0,0,0.10);
+    }
+
+    .jad-input-inner{
+        border:none;
+        input{
+            font-size: 14px;
+            &::-webkit-input-placeholder { color: rgba(0,0,0,0.20)}
+            &::-moz-placeholder { color: rgba(0,0,0,0.20)}
+            &:-ms-input-placeholder { color: rgba(0,0,0,0.20)}
+            &::placeholder { color: rgba(0,0,0,0.20)}
+        }
+    }
+}
+.version{
+    text-align:right;
+    .jad-btn{
+        vertical-align: middle;
+    }
+    .inline-block{
+        height: 80px;
+    }
+}
+.inline-block{
+    display:inline-block;
+    vertical-align: middle;
+}
+
+.s-menu-li{
+    cursor: pointer;
+}
+.s-menu-li:hover{
+    background: #eee
+}
+
+
+
+
+

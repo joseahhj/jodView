@@ -1,0 +1,25 @@
+.relative {
+    position: relative;
+}
+div,h1,h2,h3,h4,h5,h6,ul,ol,li,form,fieldset,input,textarea,select,p,
+th,td,table,a,span,button{ margin: 0; padding: 0;}
+[class^="#{$prefix-cls}"]{
+	&:focus{outline:0;}
+	&,p,th,td,table,ul,li,div,h1,h2,h3,h4,h5,h6{
+		list-style:none;
+		outline: none;
+		box-sizing:border-box;
+		-webkit-font-smoothing: antialiased;
+		font-family: PingFangSC-Light,'helvetica neue','hiragino sans gb',tahoma,'microsoft yahei ui','microsoft yahei',simsun,sans-serif;
+	}
+	ul,li{
+		list-style:none;
+	}
+	table{
+		border-collapse:collapse;border-spacing:0;
+	}
+	em,i{font-style:normal;}
+	img{border:none;outline:none;vertical-align:top;display:inline-block;}
+}
+a[class^="#{$prefix-cls}"],a[class^="#{$prefix-cls}"]:hover{text-decoration:none;}
+table[class^="#{$prefix-cls}"]{border-collapse:collapse;border-spacing:0;}

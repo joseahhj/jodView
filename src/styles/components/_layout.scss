@@ -1,0 +1,43 @@
+$prefix-cls-layout: #{$prefix-cls}-layout;
+
+.#{$prefix-cls-layout}{
+	display: block;
+	
+	@include clearfix;
+}
+.#{$prefix-cls-layout}-header,
+
+.#{$prefix-cls-layout}-footer{
+	@include clearfix;
+	width:100%;
+}
+.#{$prefix-cls-layout}-header{
+	width:100%;
+	height:60px;
+}
+.#{$prefix-cls-layout}-header-fixed{
+	position: fixed;
+	top: 0;
+}
+.#{$prefix-cls-layout}-left{
+	float:left;
+}
+.#{$prefix-cls-layout}-right{
+	float:right;
+}
+.#{$prefix-cls-layout}-sider-fixed{
+	position: fixed;
+	overflow-y: auto;
+	top:0;
+	bottom:0;
+}
+.#{$prefix-cls-layout}-fixed-left{
+	left:0
+}
+.#{$prefix-cls-layout}-fixed-right{
+	right:0
+}
+.#{$prefix-cls-layout}-content{
+	overflow:hidden;
+	@include clearfix;
+}

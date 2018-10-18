@@ -1,0 +1,87 @@
+<div id="app">
+    <div class="row">
+        <p>基础类</p>
+        <div>
+            <j-button-group ref="basic">
+                <j-button type="linear">
+                    basic
+                </j-button>
+                <j-button type="linear">
+                    basic
+                </j-button>
+                <j-button type="linear">
+                    basic
+                </j-button>
+            </j-button-group>
+        </div>
+        <p>垂直方向</p>
+        <div>
+            <j-button-group is-vertical ref="vertical">
+                <j-button type="linear">
+                    Vertical
+                </j-button>
+                <j-button type="linear">
+                    Vertical
+                </j-button>
+                <j-button type="linear">
+                    Vertical
+                </j-button>
+            </j-button-group>
+        </div>
+        <p>块级</p>
+        <div>
+            <j-button-group is-block ref="block">
+                <j-button type="linear">
+                    block
+                </j-button>
+                <j-button type="linear">
+                    block
+                </j-button>
+                <j-button type="linear">
+                    block
+                </j-button>
+            </j-button-group>
+        </div>
+        <p>大小</p>
+        <div>
+            <j-button-group size="large" ref="size">
+                <j-button type="linear">
+                    large
+                </j-button>
+                <j-button type="linear">
+                    large
+                </j-button>
+                <j-button type="linear">
+                    large
+                </j-button>
+            </j-button-group>
+        </div>
+        <p>形状</p>
+        <div>
+            <j-button-group shape="circle" ref="shape">
+                <j-button type="linear">
+                    large
+                </j-button>
+                <j-button type="linear">
+                    large
+                </j-button>
+                <j-button type="linear">
+                    large
+                </j-button>
+            </j-button-group>
+        </div>
+        <div>
+            <j-button-group :shape="type" :size="type" ref="empty">
+                <j-button type="linear">
+                    large
+                </j-button>
+                <j-button type="linear">
+                    large
+                </j-button>
+                <j-button type="linear">
+                    large
+                </j-button>
+            </j-button-group>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+$prefix-cls-spin: #{$prefix-cls}-spinner;
+
+.#{$prefix-cls-spin}{
+	position: relative; 
+	width: 0px;
+	.#{$prefix-cls-spin}-li,
+	.#{$prefix-cls-spin}-span{
+		position: absolute;
+		display:block;
+	}
+}

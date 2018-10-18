@@ -1,0 +1,248 @@
+// Steps
+// --------------------------------------------------
+$prefix-cls-step: #{$prefix-cls}-step;
+$prefix-cls-steps: #{$prefix-cls}-steps;
+$step-bg: #fff;
+$step-wait: #999;
+$step-process: #000;
+$step-finish: #20d08c;
+$step-error: #fd4545;
+
+// style of a step
+.#{$prefix-cls-step} {
+    float: left;
+    position: relative;
+    display: inline-block;
+    zoom: 1; *display: inline; /* IE < 8: 伪造 inline-block */
+    word-spacing: normal;
+    box-sizing: border-box;
+    vertical-align: top;
+    color: $step-wait;
+    user-select: none;
+    @include transition($transition-base);
+
+    &-line {
+        position: absolute;
+        top: 13px;
+        width: 100%;
+        height: 1px;
+        padding: 0 20px;
+        
+        & > span {
+            display: block;
+            height: 100%;
+            width: 100%;
+            background-color: $step-wait;
+        }
+    }
+
+    &-head {
+        position: relative;
+        display: inline-block;
+        padding-right: 10px;
+        background-color: $step-bg;
+        
+        & > div {
+            width: 26px;
+            height: 26px;
+            line-height: 26px;
+            font-size: 20px;
+            text-align: center;
+            color: $step-wait;
+            & > span {
+                display: inline-block;
+                width: 26px;
+                height: 26px;
+                border-radius: 100%;
+                border: 1px solid $step-wait;
+            }
+        }
+    }
+
+    &-main {
+        position: relative;
+        display: inline;
+        text-align: left;
+        vertical-align: top;
+        padding-right: 20px;
+    }
+    &-title {
+        display: inline-block;
+        padding-right: 10px;
+        line-height: 26px;
+        font-size: 14px;
+        background-color: $step-bg;
+    }
+    &-description {
+        padding-left: 36px;
+        padding-right: 20px;
+        font-size: 12px;
+        background-color: $step-bg;
+    }
+    &-custom-content {
+        display: inline-block;
+        padding-right: 10px;
+        background-color: $step-bg;
+        vertical-align: top;
+    }
+
+    // style of the finished steps 
+    &-finish {
+        .#{$prefix-cls-step}-line {
+            & > span {
+                background-color: $step-finish;
+            }
+        }
+        .#{$prefix-cls-step}-head {
+            & > div {
+                color: $step-finish;
+                & > span {
+                    border-color: $step-finish;
+                }
+            }
+        }
+    }
+
+    // style of the processing steps 
+    &-process {
+        color: $step-process;
+        .#{$prefix-cls-step}-head {
+            & > div {
+                color: $step-bg;
+                & > span {
+                    background-color: $step-finish;
+                    border-color: $step-finish;
+                }
+                .jad-icon {
+                    color: $step-finish;
+                }
+            }
+        }
+    }
+
+    // style of the error steps 
+    &-error {
+        .#{$prefix-cls-step}-line {
+            & > span {
+                background-color: $step-error;
+            }
+        }
+        .#{$prefix-cls-step}-head {
+            & > div {
+                color: $step-error;
+                & > span {
+                    background-color: $step-bg;
+                    border-color: $step-error;
+                }
+                .jad-icon {
+                    color: $step-error;
+                }
+            }
+        }
+    }
+
+    // style of the waitting steps 
+    &-wait {
+        .#{$prefix-cls-step}-line {
+            & > span {
+                background-color: $step-wait;
+            }
+        }
+        .#{$prefix-cls-step}-head {
+            & > div {
+                color: $step-wait;
+                & > span {
+                    background-color: $step-bg;
+                    border-color: $step-wait;
+                }
+                .jad-icon {
+                    color: $step-wait;
+                }
+            }
+        }
+    }
+}
+
+// style of steps
+.#{$prefix-cls-steps} {
+    word-spacing: -0.34em; /* IE < 8 && gecko */
+    &::after {
+        content: '';
+        clear: both;
+        display: block;
+        font-size: 0;
+    }
+}
+
+// style of steps with direction vertical 
+.#{$prefix-cls-steps}-vertical {
+    .#{$prefix-cls-step} {
+        float: none;
+        display: block;
+        padding-bottom: 30px;
+
+        &-line {
+            left: 13px;
+            top: 0px;
+            width: 1px;
+            height: 100%;
+            padding: 36px 0 10px;
+        }
+
+        &-description {
+            background-color: transparent;
+        }
+    }
+    & > div:last-child {
+        padding-bottom: 0px;
+    }
+}
+
+// style of steps with align center 
+.#{$prefix-cls-steps}-align-center {
+    .#{$prefix-cls-step} {
+        &-line {
+            left: 50%;
+        }
+
+        &-head {
+            display: block;
+            padding: 0 10px;
+            text-align: center;
+            background: none;
+
+            &-inner {
+                display: inline-block;
+                background-color: $step-bg;
+            }
+        }
+
+        &-main {
+            display: block;
+            padding: 0;
+            text-align: center;
+        }
+        &-title {
+            display: block;
+            padding: 0 30px;
+        }
+        &-description {
+            padding: 0 30px;
+        }
+        &-custom-content {
+            display: block;
+            padding: 0 30px;
+        }
+    }
+}
+
+.#{$prefix-cls-steps}-vertical.#{$prefix-cls-steps}-align-center {
+    .#{$prefix-cls-step} {
+        &-line {
+            // display: none;
+        }
+        &-main {
+            background-color: $step-bg;
+        }
+    }
+}

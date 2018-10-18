@@ -1,0 +1,323 @@
+$prefix-cls-inputnumber: #{$prefix-cls}-inputnumber;
+$ipt-num-line-height-mini: 24px;
+$ipt-num-line-height-small: 26px;
+$ipt-num-line-height-normal: 32px;
+$ipt-num-line-height-large: 38px;
+$ipt-num-width-mini: 92px;
+$ipt-num-width-small: 130px;
+$ipt-num-width-normal: 130px;
+$ipt-num-width-large: 180px;
+$ipt-num-disabled-bgc:#eee;
+$ipt-num-disabled-color:#999;
+$ipt-num-border: 1px solid #ddd;
+
+
+@mixin padding-input($left, $right) {
+    padding-left: $left;
+    padding-right: $right;
+}
+
+.#{$prefix-cls-inputnumber} {
+    position: relative;
+    display: inline-block;
+    &-icon{
+        top: 1px;
+        bottom:1px;
+        overflow:hidden;
+        line-height: $ipt-num-line-height-normal;
+    }
+    &-mini {
+        .#{$prefix-cls-inputnumber}-icon{
+            line-height: $ipt-num-line-height-mini;
+        }
+        width: $ipt-num-width-mini;
+        .#{$prefix-cls-inputnumber}-decrease {
+            width: $ipt-num-line-height-mini+2px;
+            
+            &-left, &-right {
+                i {
+                    font-size: 12px;
+                }
+                height: $ipt-num-line-height-mini/2;
+                top: $ipt-num-line-height-mini/2+1px;
+                line-height: $ipt-num-line-height-mini/2;
+            }
+            font-size: 11px;
+        }
+        .#{$prefix-cls-inputnumber}-increase {
+            width: $ipt-num-line-height-mini+2px;
+            // &-normal {
+            //     top: 1px;
+            //     bottom:1px;
+            //     overflow:hidden;
+            //     line-height: $ipt-num-line-height-mini;
+            // }
+            &-left, &-right {
+                i {
+                    font-size: 12px;
+                }
+                height: $ipt-num-line-height-mini/2;
+                top: 1px;
+                line-height: $ipt-num-line-height-mini/2;
+            }
+            font-size: 11px;
+        }
+        .#{$prefix-cls-inputnumber}-input-wrap {
+            font-size: 11px;
+            .#{$prefix-cls-inputnumber}-input {
+                height: $ipt-num-line-height-mini+2px;
+                line-height: $ipt-num-line-height-mini+2px;
+                &-normal {
+                    @include padding-input(34px, 34px)
+                }
+                &-left {
+                    @include padding-input(34px, 8px)
+                }
+                &-right {
+                    @include padding-input(8px, 34px)
+                }
+            }
+        }
+    }
+    &-small {
+        width: $ipt-num-width-small;
+        .#{$prefix-cls-inputnumber}-icon{
+            line-height: $ipt-num-line-height-mini;
+        }
+        .#{$prefix-cls-inputnumber}-decrease {
+            width: $ipt-num-line-height-small+2px;
+            // &-normal {
+            //     top: 1px;
+            //     height: $ipt-num-line-height-small;
+            // }
+            &-left, &-right {
+                i {
+                    font-size: 12px;
+                }
+                height: $ipt-num-line-height-small/2;
+                top: $ipt-num-line-height-small/2+1px;
+                line-height: $ipt-num-line-height-small/2;
+            }
+            font-size: 11px;
+        }
+        .#{$prefix-cls-inputnumber}-increase {
+            width: $ipt-num-line-height-small+2px;
+            // &-normal {
+            //     top: 1px;
+            //     height: $ipt-num-line-height-small;
+            // }
+            &-left, &-right {
+                i {
+                    font-size :12px;
+                }
+                height: $ipt-num-line-height-small/2;
+                top: 1px;
+                line-height: $ipt-num-line-height-small/2;
+            }
+            font-size: 11px;
+        }
+        .#{$prefix-cls-inputnumber}-input-wrap {
+            font-size: 11px;
+            .#{$prefix-cls-inputnumber}-input {
+                height: $ipt-num-line-height-small+2px;
+                line-height: $ipt-num-line-height-small+2px;
+                &-normal {
+                    @include padding-input(36px, 36px)
+                }
+                &-left {
+                    @include padding-input(36px, 8px)
+                }
+                &-right {
+                    @include padding-input(8px, 35px)
+                }
+            }
+        }
+    }
+    &-normal {
+        width: $ipt-num-width-normal;
+        .#{$prefix-cls-inputnumber}-decrease {
+            width: $ipt-num-line-height-normal+2px;
+            // &-normal {
+            //     top: 1px;
+            //     height: $ipt-num-line-height-normal;
+            // }
+            &-left, &-right {
+                height: $ipt-num-line-height-normal/2;
+                top: $ipt-num-line-height-normal/2+1px;
+                line-height: $ipt-num-line-height-normal/2;
+            }
+            font-size: 13px;
+        }
+        .#{$prefix-cls-inputnumber}-increase {
+            width: $ipt-num-line-height-normal+2px;
+            // &-normal {
+            //     top: 1px;
+            //     height: $ipt-num-line-height-normal;
+            // }
+            &-left, &-right {
+                height: $ipt-num-line-height-normal/2;
+                top: 1px;
+                line-height: $ipt-num-line-height-normal/2;
+            }
+            font-size: 13px;
+        }
+        .#{$prefix-cls-inputnumber}-input-wrap {
+            font-size: 14px;
+            .#{$prefix-cls-inputnumber}-input {
+                height: $ipt-num-line-height-normal+2px;
+                line-height: $ipt-num-line-height-normal+2px;
+                &-normal {
+                    @include padding-input(42px, 42px)
+                }
+                &-left {
+                    @include padding-input(42px, 8px)
+                }
+                &-right {
+                    @include padding-input(8px, 42px)
+                }
+            }
+        }
+    }
+    &-large {
+        width: $ipt-num-width-large;
+        .#{$prefix-cls-inputnumber}-icon{
+            line-height: $ipt-num-line-height-large;
+        }
+        .#{$prefix-cls-inputnumber}-decrease {
+            width: $ipt-num-line-height-large+2px;
+            // &-normal {
+            //     top: 1px;
+            //     height: $ipt-num-line-height-large;
+            // }
+            &-left, &-right {
+                height: $ipt-num-line-height-large/2;
+                top: $ipt-num-line-height-large/2+1px;
+                line-height: $ipt-num-line-height-large/2;
+            }
+            font-size: 13px;
+        }
+        .#{$prefix-cls-inputnumber}-increase {
+            width: $ipt-num-line-height-large+2px;
+            // &-normal {
+            //     top: 1px;
+            //     height: $ipt-num-line-height-large;
+            // }
+            &-left, &-right {
+                height: $ipt-num-line-height-large/2;
+                top: 1px;
+                line-height: $ipt-num-line-height-large/2;
+            }
+            font-size: 13px;
+        }
+        .#{$prefix-cls-inputnumber}-input-wrap {
+            font-size: 14px;
+            .#{$prefix-cls-inputnumber}-input {
+                height: $ipt-num-line-height-large+2px;
+                line-height: $ipt-num-line-height-large+2px;
+                &-normal {
+                    @include padding-input(50px, 50px)
+                }
+                &-left {
+                    @include padding-input(50px, 8px)
+                }
+                &-right {
+                    @include padding-input(8px, 50px)
+                }
+            }
+        }
+    }  
+}
+//减法符号位置
+.#{$prefix-cls-inputnumber}-decrease {
+    &-normal { 
+        left: 1px;
+        @include border-left-radius(4px);
+        border-right: $ipt-num-border;
+    }
+    &-left {
+        left: 1px;
+        @include border-bottom-left-radius(4px);
+        border-top: $ipt-num-border;
+        border-right: $ipt-num-border;
+    }
+    &-right {
+        right: 1px;
+        @include border-bottom-right-radius(4px);
+        border-top: $ipt-num-border;
+        border-left: $ipt-num-border;
+    }
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+    background: #f5f7fa;
+    color: #606266;
+    cursor: pointer;
+}
+//加法符号位置 
+.#{$prefix-cls-inputnumber}-increase {
+    &-normal {
+        right: 1px;
+        @include border-right-radius(4px);
+        border-left: $ipt-num-border;
+    }
+    &-left {
+        left: 1px;
+        @include border-top-left-radius(4px);
+        border-right: $ipt-num-border;
+    }
+    &-right {
+        right: 1px;
+        @include border-top-right-radius(4px);
+        border-left: $ipt-num-border;
+    }
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+    background: #f5f7fa;
+    color: #606266;
+    cursor: pointer;
+}
+
+.#{$prefix-cls-inputnumber}-input-wrap {
+    position: relative;
+    display: block;
+    width: 100%
+}
+.#{$prefix-cls-inputnumber}-input {
+    display: inline-block;
+    &-control {
+        padding-left: 10px !important;
+        padding-right: 10px !important
+    }
+    &-normal {
+        text-align:center;
+    }
+    &-left, &-right {
+        text-align:left;
+    }
+    box-sizing:border-box;
+    width:100%;
+    border-radius: 4px;
+    color: #606266;
+    background-color: #fff;
+    background-image: none;
+    border: $ipt-num-border;
+    font-size: inherit;
+    transition: border-color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+@mixin disabled-input {
+    cursor: #{$cursor-disabled};
+    color: $ipt-num-disabled-color;
+    background: $ipt-num-disabled-bgc;
+}
+//禁用状态
+.#{$prefix-cls-inputnumber}-disabled {
+    opacity:.8;
+    .#{$prefix-cls-inputnumber}-decrease, .#{$prefix-cls-inputnumber}-increase, .#{$prefix-cls-inputnumber}-input {
+        @include disabled-input
+    }
+}
+//禁用加减法
+.#{$prefix-cls-inputnumber}-decrease-disabled, .#{$prefix-cls-inputnumber}-increase-disabled {
+    @include disabled-input
+}

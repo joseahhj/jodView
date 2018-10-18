@@ -1,0 +1,229 @@
+$prefix-cls-menu: #{$prefix-cls}-menu;
+$prefix-cls-menu-text-color: #333;
+$item-active-color: #2d8cf0;
+$item-height: 42px;
+$item-hover-background: #f3f3f3;
+$blue-background-color: #2d425f;
+$blue-item-active-color: #fff;
+$blue-item-hover-background: #283b55;
+
+.#{$prefix-cls-menu} {
+    display: block;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    list-style: none;
+    color: #{$prefix-cls-menu-text-color};
+    background: #fff;
+    font-size: #{$font-size-normal};
+    position: relative;
+    border-right: 1px solid #e6e6e6;
+    
+    &-vertical {
+        &:before {
+            content: '';
+            display: table;
+        }
+
+    }
+
+    &-item{
+        display: block;
+        outline: none;
+        list-style: none;
+        font-size: #{$font-size-normal};
+        position: relative;
+        z-index: 1;
+        cursor: pointer;
+        transition: #{$transition-base};
+        padding: 0 20px 0 30px;
+    }
+    /*&-item > i{
+        margin-right: 6px;
+    }*/
+
+    &-item, &-sub-title, &-group-title {
+        height: #{$item-height};
+        line-height: #{$item-height};
+    }
+
+    &-sub-title {
+        padding: 0 20px 0 10px;
+    }
+
+    &-sub-icon {
+        width: 16px;
+        display: inline-block;
+        text-align: center;
+    }
+
+    &-group-title {
+        opacity: 0.3;
+        padding-right: 10px;
+    }
+   
+
+    &-vertical &-item, &-vertical &-sub-title {
+        cursor: pointer;
+
+        &:hover {
+            background: #{$item-hover-background};
+        }
+
+        &-active {
+            color: #{$item-active-color};
+            z-index: 2;
+        }
+    }
+
+    &-horizontal {
+        height: #{$item-height};
+        line-height: #{$item-height};
+        border-right: none;
+
+        .#{$prefix-cls-menu}-sub-active .#{$prefix-cls-menu}-sub-title {
+            color: #{$item-active-color};
+            border-bottom: 2px solid #{$item-active-color};          
+        }
+
+        .#{$prefix-cls-menu}-sub-active .#{$prefix-cls-menu}-sub .#{$prefix-cls-menu}-sub-title {
+            color: inherit;
+            border-bottom: inherit;
+        }
+
+        .#{$prefix-cls-menu}-sub-active .#{$prefix-cls-menu}-sub-active .#{$prefix-cls-menu}-sub-title {
+            color: #{$item-active-color};
+        }
+        
+        .#{$prefix-cls-menu}-item, .#{$prefix-cls-menu}-sub-title {
+            float: left;
+            padding: 0 20px;
+            position: relative;
+            cursor: pointer;
+            z-index: 3;
+            transition: all .2s ease-in-out;
+            border-bottom: 2px solid transparent;
+
+            &-active, &:hover {
+                color: #{$item-active-color};
+                border-bottom: 2px solid #{$item-active-color};
+            }
+
+        }
+
+        &:after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 1px;
+            background: #dddee1;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        .#{$prefix-cls-menu}-sub {
+            float: left;
+
+            .#{$prefix-cls}-dropdown-popper {
+                top: #{$item-height};
+                overflow-y: inherit;
+                max-height: none;
+            }
+
+            &-drop .#{$prefix-cls-menu}-item, &-drop .#{$prefix-cls-menu}-sub-title {
+                height: auto;
+                border-bottom: 0;
+                float: none;
+                margin: 0;
+                line-height: #{$item-height};
+                /*padding: 7px 16px;*/
+                clear: both;
+                white-space: nowrap;
+                list-style: none;
+                cursor: pointer;
+                transition: background .2s ease-in-out;
+
+                &:hover {
+                    background: #{$item-hover-background};
+                }
+
+                &-active {
+                    color: #{$item-active-color};
+                    z-index: 2;
+                }
+
+                .#{$prefix-cls}-dropdown-popper {
+                    left: 135px;
+                }
+            }
+        }
+        
+    }
+
+    &-blue {
+        background-color: #{$blue-background-color};
+        &.#{$prefix-cls-menu}-vertical {
+            .#{$prefix-cls-menu}-item, .#{$prefix-cls-menu}-sub-title {
+                color: #{$blue-item-active-color};
+                opacity: .5;
+
+                &:hover {
+                    background: #{$blue-item-hover-background};
+                }
+
+                &-active {
+                    color: #{$blue-item-active-color};
+                    background: #{$blue-item-hover-background};
+                    opacity: 1;
+                }
+            }
+        }
+
+        &.#{$prefix-cls-menu}-horizontal {
+
+            .#{$prefix-cls}-dropdown-popper {
+                background-color: #{$blue-background-color};
+            }
+        
+            .#{$prefix-cls-menu}-sub-active .#{$prefix-cls-menu}-sub .#{$prefix-cls-menu}-sub-title {
+                opacity: .5;
+                background: inherit;
+            }
+
+            .#{$prefix-cls-menu}-sub-active .#{$prefix-cls-menu}-sub-title,
+            .#{$prefix-cls-menu}-sub-active .#{$prefix-cls-menu}-sub-active .#{$prefix-cls-menu}-sub-title {
+                color: #{$blue-item-active-color};
+                background: #{$blue-item-hover-background};
+                opacity: 1;
+                border-bottom: none;        
+            }
+
+            .#{$prefix-cls-menu}-item, .#{$prefix-cls-menu}-sub-title {
+                color: #{$blue-item-active-color};
+                opacity: .5;
+
+                &:hover {
+                    background: #{$blue-item-hover-background};
+                    border-bottom: none;
+                }
+
+                &-active {
+                    color: #{$blue-item-active-color};
+                    background: #{$blue-item-hover-background};
+                    opacity: 1;
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+
+    & &-item-disabled, &-sub-disabled &-sub-title {
+        opacity: 0.25;
+        cursor: not-allowed;
+
+        &:hover {
+            background-color: transparent;
+        };
+    }
+}

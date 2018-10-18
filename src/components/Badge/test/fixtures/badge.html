@@ -1,0 +1,15 @@
+<div id="app">
+    <j-badge value="new" ref="basic"></j-badge>
+    <j-badge value="new" ref="fixed">
+        <j-button>评论</j-button>
+    </j-badge>
+    <j-badge :value="value" ref="valueContent"></j-badge>
+    <j-badge ref="dot" is-dot></j-badge>
+    <j-badge :value="value" :max="max" ref="max"></j-badge>
+    <div>
+        <j-badge v-for="item in types" :key="item" :type="item" :value="item" :ref="'type'+item"></j-badge>
+    </div>
+    <j-badge class-name="myClass" value="89" ref="defineClass"></j-badge>
+    <j-badge value="12" ref="size" :size="size"></j-badge>
+    <j-badge :is-visible='show' value="new" ref="show"></j-badge>
+</div>

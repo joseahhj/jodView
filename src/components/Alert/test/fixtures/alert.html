@@ -1,0 +1,25 @@
+<div id="app">
+    <div class="row">
+        <div v-for="type in types" :key="type">
+            <j-alert :type="type" title="消息提示" :ref="`alert${type ? `-${type}` : ''}`"></j-alert> 
+        </div>
+        <j-alert :is-closable="true" title="可被手动关闭的消息提示" ref="alert_close_emit" @on-close="closeHandler">
+        </j-alert>  
+        <j-alert type="error" :is-closable="true" title="默认关闭按钮" ref="alert_close">
+        </j-alert>  
+        <j-alert is-show-icon title="带有icon的消息提示" ref="alert_icon">
+        </j-alert>  
+        <j-alert 
+            title="带有描述信息，不带icon的消息提示" 
+            :is-closable="true"
+            ref="alert_descripe" 
+            :desc="descInfo"
+        >
+        </j-alert>  
+        <div style="width: 100px">
+            <j-alert is-nowrap title="消息提示消息提示消息提示消息提示消息提示消息提示消提示消息提示消息提示消提示消息提示消息提示消" ref="alert_nowrap">
+            </j-alert>  
+        </div>
+    </div>
+
+</div>

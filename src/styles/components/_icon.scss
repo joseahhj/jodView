@@ -1,0 +1,600 @@
+
+
+$ionicons-version: "2.0.0";
+$prefix-cls-icon: #{$prefix-cls}-icon;
+
+@font-face {
+	font-family: $icon-font-name;
+	src:url("#{$icon-font-path}/jadpc.eot?v=#{$ionicons-version}");
+	src:url("#{$icon-font-path}/jadpc.eot?v=#{$ionicons-version}#iefix") format("embedded-opentype"),
+	url("#{$icon-font-path}/jadpc.ttf?v=#{$ionicons-version}") format("truetype"),
+	url("#{$icon-font-path}/jadpc.woff?v=#{$ionicons-version}") format("woff"),
+	url("#{$icon-font-path}/jadpc.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="#{$prefix-cls-icon}"]{
+	font-family: $icon-font-name;
+	speak: none;
+	font-size: 16px;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	// -webkit-text-stroke-width: 0.2px;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+
+
+.#{$prefix-cls-icon}-home:before{
+	content: "\e60f";
+}
+.#{$prefix-cls-icon}-home1:before{
+	content: "\e902";
+}
+.#{$prefix-cls-icon}-refresh:before{
+	content: "\e931";
+}
+.#{$prefix-cls-icon}-refresh1:before{
+	content: "\e6a5";
+}
+.#{$prefix-cls-icon}-ad-calendar:before{
+	content: "\e6b7";
+}
+.#{$prefix-cls-icon}-ad-analysis:before{
+	content: "\e6b8";
+}
+.#{$prefix-cls-icon}-calendar:before{
+	content: "\f073";
+}
+.#{$prefix-cls-icon}-calendar-o:before{
+	content: "\f133";
+}
+.#{$prefix-cls-icon}-statistics:before{
+	content: "\e92f";
+}
+
+.#{$prefix-cls-icon}-chart:before{
+	content: "\e63e";
+}
+.#{$prefix-cls-icon}-chart2:before {
+	content: "\e936";
+}
+.#{$prefix-cls-icon}-chart3:before {
+  content: "\e942";
+}
+.#{$prefix-cls-icon}-chart4:before {
+  content: "\e901";
+}
+
+.#{$prefix-cls-icon}-chart5:before {
+  content: "\e934";
+}
+.#{$prefix-cls-icon}-search2:before {
+	content: "\e932";
+}
+.#{$prefix-cls-icon}-search:before {
+	content: "\f002";
+}
+.#{$prefix-cls-icon}-audit:before {
+  content: "\e943";
+}
+
+.#{$prefix-cls-icon}-download:before{
+	content: "\e953";
+}
+
+.#{$prefix-cls-icon}-upload:before{
+	content: "\e954";
+}
+.#{$prefix-cls-icon}-envelope-o:before{
+	content: "\f003";
+}
+
+.#{$prefix-cls-icon}-envelope:before{
+	content: "\f0e0";
+}
+
+.#{$prefix-cls-icon}-trash-o:before{
+	content: "\f014";
+}
+.#{$prefix-cls-icon}-trash-o2:before {
+	content: "\e91c";
+}
+.#{$prefix-cls-icon}-trash-o3:before {
+	content: "\e946";
+}
+
+.#{$prefix-cls-icon}-dot-circle-o:before {
+	content: "\e918";
+}
+.#{$prefix-cls-icon}-location-o:before{
+	content: "\e90d";
+}
+
+.#{$prefix-cls-icon}-filter:before{
+	content: "\e945";
+}
+
+.#{$prefix-cls-icon}-filter2:before {
+	content: "\e944";
+}
+.#{$prefix-cls-icon}-diamond:before{
+	content: "\e61a";
+}
+.#{$prefix-cls-icon}-bell-o:before{
+	content: "\e94b";
+}
+
+.#{$prefix-cls-icon}-clock:before{
+	content: "\e951";
+}
+.#{$prefix-cls-icon}-clock2:before{
+	content: "\e93f";
+}
+.#{$prefix-cls-icon}-clock3:before{
+	content: "\e95d";
+}
+.#{$prefix-cls-icon}-clock4:before{
+	content: "\e62a";
+}
+.#{$prefix-cls-icon}-clock5:before{
+	content: "\e940";
+}
+.#{$prefix-cls-icon}-clock6:before{
+	content: "\e93e";
+}
+.#{$prefix-cls-icon}-clock7:before{
+	content: "\e92b";
+}
+.#{$prefix-cls-icon}-sandyClock:before {
+  content: "\e952";
+}
+
+.#{$prefix-cls-icon}-user:before{
+	content: "\f007";
+}
+.#{$prefix-cls-icon}-user2:before{
+	content: "\e6bb";
+}
+.#{$prefix-cls-icon}-user3:before{
+	content: "\e927";
+}
+.#{$prefix-cls-icon}-user4:before{
+	content: "\e928";
+}
+.#{$prefix-cls-icon}-user5:before{
+	content: "\e929";
+}
+.#{$prefix-cls-icon}-user6:before{
+	content: "\e91e";
+}
+.#{$prefix-cls-icon}-user-md:before{
+	content: "\e922";
+}
+.#{$prefix-cls-icon}-switch2:before{
+	content: "\f011";
+}
+
+.#{$prefix-cls-icon}-cog:before{
+	content: "\e915";
+}
+
+.#{$prefix-cls-icon}-edit:before{
+	content: "\e656";
+}
+.#{$prefix-cls-icon}-pencil:before {
+	content: "\e930";
+}
+.#{$prefix-cls-icon}-pencil2:before {
+	content: "\e92c";
+}
+.#{$prefix-cls-icon}-edit2:before {
+	content: "\e92e";
+}
+.#{$prefix-cls-icon}-edit3:before {
+	content: "\e92d";
+}
+.#{$prefix-cls-icon}-ad-state3:before {
+	content: "\e6be";
+}
+.#{$prefix-cls-icon}-popout:before{
+	content: "\e654";
+}
+
+.#{$prefix-cls-icon}-popin:before{
+	content: "\e655";
+}
+.#{$prefix-cls-icon}-plus:before{
+	content: "\e65f";
+}
+.#{$prefix-cls-icon}-plus3:before{
+	content: "\e660";
+}
+.#{$prefix-cls-icon}-plus2:before{
+	content: "\e657";
+}
+.#{$prefix-cls-icon}-plus4:before{
+	content: "\e659";
+}
+.#{$prefix-cls-icon}-plus5:before{
+	content: "\e937";
+}
+.#{$prefix-cls-icon}-minus6:before{
+	content: "\e658";
+}
+
+.#{$prefix-cls-icon}-minus:before{
+	content: "\e65e";
+}
+.#{$prefix-cls-icon}-minus4:before{
+	content: "\e661";
+}
+.#{$prefix-cls-icon}-minus2:before{
+	content: "\e658";
+}
+.#{$prefix-cls-icon}-minus3:before{
+	content: "\e65a";
+}
+
+
+.#{$prefix-cls-icon}-cancel:before{
+	content: "\e65b";
+}
+.#{$prefix-cls-icon}-cancel2:before{
+	content: "\e666";
+}
+.#{$prefix-cls-icon}-cancel3:before{
+	content: "\e662";
+}
+.#{$prefix-cls-icon}-cancel4:before {
+	content: "\e938";
+}
+.#{$prefix-cls-icon}-cancel5:before {
+	content: "\e939";
+}
+.#{$prefix-cls-icon}-checkmark3:before{
+	content: "\e663";
+}
+
+.#{$prefix-cls-icon}-checkmark2:before{
+	content: "\e664";
+}
+
+.#{$prefix-cls-icon}-checkmark:before{
+	content: "\e93a";
+}
+.#{$prefix-cls-icon}-help:before{
+	content: "\e900";
+}
+.#{$prefix-cls-icon}-help1:before{
+	content: "\e933";
+}
+.#{$prefix-cls-icon}-notice:before{
+	content: "\e93b";
+}
+.#{$prefix-cls-icon}-notice2:before{
+	content: "\e956";
+}
+.#{$prefix-cls-icon}-info:before{
+	content: "\ea0c";
+}
+.#{$prefix-cls-icon}-info2:before{
+	content: "\e67e";
+}
+.#{$prefix-cls-icon}-warning:before{
+	content: "\e93c";
+}
+.#{$prefix-cls-icon}-warning1:before{
+	content: "\ea07";
+}
+.#{$prefix-cls-icon}-ellipsis-h:before{
+	content: "\f141";
+}
+.#{$prefix-cls-icon}-ellipsis-v:before{
+	content: "\f142";
+}
+.#{$prefix-cls-icon}-ellipsis:before{
+	content: "\e693";
+}
+
+.#{$prefix-cls-icon}-dots:before{
+	content: "\e694";
+}
+
+.#{$prefix-cls-icon}-dot:before{
+	content: "\e695";
+}
+
+.#{$prefix-cls-icon}-logout:before{
+	content: "\e686";
+}
+
+.#{$prefix-cls-icon}-login:before{
+	content: "\e687";
+}
+.#{$prefix-cls-icon}-image:before{
+	content: "\e689";
+}
+
+.#{$prefix-cls-icon}-image1:before{
+	content: "\e93d";
+}
+.#{$prefix-cls-icon}-double-arrow:before{
+	content: "\e94c";
+}
+.#{$prefix-cls-icon}-chevron-up:before{
+	content: "\e94d";
+}
+
+.#{$prefix-cls-icon}-chevron-down:before{
+	content: "\e94e";
+}
+.#{$prefix-cls-icon}-long-arrow-left:before{
+	content: "\f177";
+}
+
+.#{$prefix-cls-icon}-long-arrow-right:before{
+	content: "\f178";
+}
+
+.#{$prefix-cls-icon}-long-arrow-down:before{
+	content: "\f175";
+}
+
+.#{$prefix-cls-icon}-long-arrow-up:before{
+	content: "\f176";
+}
+.#{$prefix-cls-icon}-alpha-asc:before{
+	content: "\f15d";
+}
+
+.#{$prefix-cls-icon}-alpha-desc:before{
+	content: "\f15e";
+}
+
+.#{$prefix-cls-icon}-amount-desc:before{
+	content: "\f161";
+}
+
+.#{$prefix-cls-icon}-amount-asc:before{
+	content: "\f160";
+}
+
+.#{$prefix-cls-icon}-numeric-asc:before{
+	content: "\f162";
+}
+
+.#{$prefix-cls-icon}-numeric-desc:before{
+	content: "\f163";
+}
+.#{$prefix-cls-icon}-angle-double-left:before{
+	content: "\f100";
+}
+
+.#{$prefix-cls-icon}-angle-double-right:before{
+	content: "\f101";
+}
+
+.#{$prefix-cls-icon}-angle-double-up:before{
+	content: "\f102";
+}
+
+.#{$prefix-cls-icon}-angle-double-down:before{
+	content: "\f103";
+}
+
+.#{$prefix-cls-icon}-angle-left:before{
+	content: "\f104";
+}
+
+.#{$prefix-cls-icon}-angle-right:before{
+	content: "\f105";
+}
+
+.#{$prefix-cls-icon}-angle-up:before{
+	content: "\f106";
+}
+
+.#{$prefix-cls-icon}-angle-down:before{
+	content: "\f107";
+}
+.#{$prefix-cls-icon}-caret-up:before{
+	content: "\f0d8";
+}
+
+.#{$prefix-cls-icon}-caret-left:before{
+	content: "\f0d9";
+}
+
+.#{$prefix-cls-icon}-caret-right:before{
+	content: "\f0da";
+}
+
+.#{$prefix-cls-icon}-caret-down:before{
+	content: "\f0d7";
+}
+.#{$prefix-cls-icon}-comment:before{
+	content: "\e924";
+}
+.#{$prefix-cls-icon}-chat:before{
+	content: "\e919";
+}
+
+
+.#{$prefix-cls-icon}-star:before{
+	content: "\e9d9";
+}
+
+.#{$prefix-cls-icon}-star-half-empty:before{
+	content: "\e9d8";
+}
+
+.#{$prefix-cls-icon}-star-half:before{
+	content: "\e9d8";
+}
+
+.#{$prefix-cls-icon}-star-o:before{
+	content: "\e9d7";
+}
+
+.#{$prefix-cls-icon}-power-off:before{
+	content: "\f011";
+}
+.#{$prefix-cls-icon}-flag:before{
+	content: "\e948";
+}
+.#{$prefix-cls-icon}-spinner{
+	display: inline-block;
+	animation: load8 2s linear infinite;
+}
+.#{$prefix-cls-icon}-spinner:before{
+	content: "\f110";
+}
+
+.#{$prefix-cls-icon}-smile-o:before{
+	content: "\f118";
+}
+
+.#{$prefix-cls-icon}-frown-o:before{
+	content: "\f119";
+}
+
+.#{$prefix-cls-icon}-meh-o:before{
+	content: "\f11a";
+}
+
+.#{$prefix-cls-icon}-volume:before{
+	content: "\e94a";
+}
+.#{$prefix-cls-icon}-volume2:before{
+	content: "\e6ae";
+}
+.#{$prefix-cls-icon}-volume3:before{
+	content: "\e6b1";
+}
+.#{$prefix-cls-icon}-copy:before{
+	content: "\e90f";
+}
+.#{$prefix-cls-icon}-copy1:before{
+	content: "\e955";
+}
+.#{$prefix-cls-icon}-file-empty:before{
+	content: "\e958";
+}
+.#{$prefix-cls-icon}-files-empty:before {
+  content: "\e959";
+}
+.#{$prefix-cls-icon}-file-text-o:before {
+  content: "\e95a";
+}
+.#{$prefix-cls-icon}-file-picture:before {
+  content: "\e95b";
+}
+.#{$prefix-cls-icon}-file-music:before {
+  content: "\e95c";
+}
+.#{$prefix-cls-icon}-file-play:before {
+  content: "\e95e";
+}
+.#{$prefix-cls-icon}-file-video:before {
+  content: "\e95f";
+}
+.#{$prefix-cls-icon}-github-alt:before {
+  content: "\f113";
+}
+.#{$prefix-cls-icon}-github:before {
+  content: "\eab0";
+}
+.#{$prefix-cls-icon}-price:before {
+  content: "\e906";
+}
+.#{$prefix-cls-icon}-price2:before {
+  content: "\e907";
+}
+.#{$prefix-cls-icon}-price3:before {
+  content: "\e908";
+}
+.#{$prefix-cls-icon}-price4:before {
+  content: "\e909";
+}
+.#{$prefix-cls-icon}-price5:before {
+  content: "\e90a";
+}
+
+.#{$prefix-cls-icon}-create:before {
+  content: "\e920";
+}
+.#{$prefix-cls-icon}-create2:before {
+  content: "\e957";
+}
+.#{$prefix-cls-icon}-create3:before {
+  content: "\e91f";
+}
+.#{$prefix-cls-icon}-create4:before {
+  content: "\e905";
+}
+.#{$prefix-cls-icon}-play:before {
+  content: "\e904";
+}
+.#{$prefix-cls-icon}-play2:before {
+  content: "\e935";
+}
+
+.#{$prefix-cls-icon}-bag:before {
+  content: "\e903";
+}
+.#{$prefix-cls-icon}-bag2:before {
+  content: "\e913";
+}
+.#{$prefix-cls-icon}-bag3:before {
+  content: "\e923";
+}
+.#{$prefix-cls-icon}-bag4:before {
+  content: "\e917";
+}
+.#{$prefix-cls-icon}-bag5:before {
+  content: "\e91d";
+}
+.#{$prefix-cls-icon}-bag6:before {
+  content: "\e916";
+}
+.#{$prefix-cls-icon}-settings:before {
+  content: "\e949";
+}
+.#{$prefix-cls-icon}-circle-empty:before {
+  content: "\e947";
+}
+.#{$prefix-cls-icon}-circle-ci:before {
+  content: "\e90e";
+}
+.#{$prefix-cls-icon}-align-left:before {
+  content: "\e91b";
+}
+.#{$prefix-cls-icon}-align-right:before {
+  content: "\e926";
+}
+.#{$prefix-cls-icon}-align-center:before {
+  content: "\e90b";
+}
+.#{$prefix-cls-icon}-align-center1:before {
+  content: "\e90c";
+}
+.#{$prefix-cls-icon}-tag:before {
+  content: "\e911";
+}
+.#{$prefix-cls-icon}-tag2:before {
+  content: "\e912";
+}
+.#{$prefix-cls-icon}-tag3:before {
+  content: "\e910";
+}
+.#{$prefix-cls-icon}-lightning:before {
+  content: "\e914";
+}
+.#{$prefix-cls-icon}-video:before {
+  content: "\e91a";
+}
+.#{$prefix-cls-icon}-thermometer:before {
+  content: "\e925";
+}

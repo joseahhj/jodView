@@ -1,0 +1,55 @@
+<div id="app">
+    <j-tag ref="basic">
+        用户定向default
+    </j-tag>
+    <j-tag type="primary">
+        用户定向primary
+    </j-tag>
+    <div v-for="type in types" :key="type">
+        <j-tag :type="type" :ref="`tag${type ? `-${type}` : ''}`"></j-tag>
+    </div>
+    <div v-for="type in types" :key="`outline-${type}`">
+        <j-tag :type="type" :ref="`tag-outline${type ? `-${type}` : ''}`" is-outline></j-tag>
+    </div>
+    <div v-for="size in sizes" :key="size">
+        <j-tag :size="size" :ref="`tag${size ? `-${size}` : ''}`"></j-tag>
+    </div>
+    <div v-for="shape in shapes" :key="shape">
+        <j-tag :shape="shape" :ref="`tag${shape ? `-${shape}` : ''}`"></j-tag>
+    </div>
+    <j-tag type="success" shape="rounded" is-disabled ref="tag-disabled">
+        success
+    </j-tag>
+    <j-tag type="success" is-closable :width="200" ref="tag_closable" @on-close="handleClick">
+        自定义宽度1
+    </j-tag>
+    <j-tag type="success" is-disabled is-closable :width="200" ref="tag_closable_disabled" @on-close="handleClick">
+        自定义宽度2
+    </j-tag>
+    <j-tag is-outline color="#20b5ae">
+        自定义1
+    </j-tag>
+    <j-tag color="#20b5ae">
+        自定义2
+    </j-tag>
+    <br/>
+    <j-tag is-hover>
+        用户定向
+    </j-tag>
+    <p style="padding:10px 0">图标样式</p>
+    <j-tag icon="chart">
+        default
+    </j-tag>
+    <j-tag type="success" :icon="{type:'calendar',color:'#fff'}">
+        success
+    </j-tag>
+    <j-tag type="info">
+        info
+        <j-icon type="circle-word" color="#fff"></j-icon>
+    </j-tag>
+    <j-tag type="">
+        info
+
+    </j-tag>
+    <br/>
+</div>

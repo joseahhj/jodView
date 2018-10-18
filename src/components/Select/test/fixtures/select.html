@@ -1,0 +1,20 @@
+<div id="app">
+    <j-select :options="fruitOptions" popper-class-name="basic_test" placeholder="全部" @on-select="selectedHandler" ref="basic"></j-select>
+    <j-select :options="fruitOptions" style="min-width:100px" type="info" placement="top"></j-select>
+    <j-select type="input" :options="fruitOptions" :is-show-select="false"></j-select>
+    <j-select :options="fruitOptions" size="large" popper-class-name="trigger_click_test" placeholder="large" popper-width="100" ref="trigger_click"></j-select>
+    <p>默认选中</p>
+    <j-select :options="fruitOptions" v-model="single" style="min-width:100px" popper-class-name="default_select_test" ref="defaultSelect"></j-select>
+    <j-select :options="fruitOptions" style="min-width:100px" is-multiple v-model="mutli" popper-class-name="default_multi_test" ref="defaultMilt"></j-select>
+    <p>可搜索</p>
+    <j-select :options="fruitOptions" type="input" v-model="single" is-search is-extra search-placeholder="可搜索、可添加" popper-class-name="search_input_test" ref="search_input"></j-select>
+    <j-select :options="fruitOptions" type="input" v-model="mutli" is-search is-extra is-multiple popper-class-name="search_multi_input_test" ref="search_multiple_input"></j-select>
+    <j-select :options="fruitOptions" is-multiple ref="selectMilt" popper-class-name="select_multi_test"></j-select>
+
+    <j-select :options="fruitOptions" is-disabled></j-select>
+    <j-select :options="groupOpt" style="width:100px" ref="groupSingle" popper-class-name="group_single_test"></j-select>
+    <j-select :options="groupOpt" style="width:100px" ref="groupMulti" :limit="2" popper-class-name="group_multi_test" is-multiple></j-select>
+    <j-select :options="remoteOption" type="input" is-search is-remote :remote-method="remoteMethod" ref="remote_select" popper-class-name="remote_select_test"></j-select>
+    <j-select type="input" :options="filterOptions" is-search :filter-metod="filter" ref="filter_method"></j-select>
+
+</div>

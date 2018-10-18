@@ -1,0 +1,273 @@
+$prefix-cls-select: #{$prefix-cls}-select;
+.#{$prefix-cls-select} {
+    display: inline-block;
+    .#{$prefix-cls-select}-input-clear {
+        display: none;
+        position: absolute;
+        height: 24px;
+        right: 5px;
+        background: #fff;
+        cursor: pointer
+    }
+    .#{$prefix-cls}-btn-default,
+    .#{$prefix-cls}-input-wrapper,
+     .#{$prefix-cls-select}-input-mulit-wrap{
+        .#{$prefix-cls}-icon{
+            color: #ccc;
+            font-size: 18px;
+        }
+    }
+    
+    &:hover {
+        .#{$prefix-cls-select}-input-clear {
+            display: inline-block
+        }
+    }
+    .#{$prefix-cls}-input-inner-readonly{
+        border-color:$gray-light1
+    }
+}
+
+.#{$prefix-cls-select}-input-mulit{
+    &-wrap{
+        position: relative;
+        border: 1px solid $gray-light1;
+        width: 100%;
+        color: $gray-dark;
+        padding: 0 20px 0 5px;
+        line-height: $height-base;
+        font-size: $font-size-normal;
+        border-radius:$border-radius-default;
+        
+        &.#{$prefix-cls-select}-input-mulit-medium {
+            line-height: $height-medium;
+        }
+        &.#{$prefix-cls-select}-input-mulit-large {
+            line-height: $height-large;
+        }
+        &.#{$prefix-cls-select}-input-mulit-small {
+            line-height: $height-small;
+        }
+        .#{$prefix-cls-select}-input-place-text {
+            color: #999;
+        }
+        input {
+            width: 100%;
+            border: none;
+        }
+        &:hover {
+            border-color: #aaa;
+        }
+        .#{$prefix-cls-select}-input-arrow,
+        .#{$prefix-cls-select}-input-clear {
+            position: absolute;
+            top: 50%;
+            margin-top: -12px;
+            right: 5px;
+            line-height: 24px;
+        }
+        .#{$prefix-cls-select}-input-mirror {
+            position: absolute;
+            top: 0;
+            left: -9999px;
+            white-space: pre;
+            pointer-events: none;
+        }
+    }
+    &-disabled{
+        &,&:hover{
+            background: $gray-lighter;
+            border-color: $gray-light1;   
+        }
+        
+    }
+}
+
+.#{$prefix-cls-select}-multi-all {
+    i {
+        float: right
+    }
+}
+
+.#{$prefix-cls-select}-input-search-wrap {
+    position: relative;
+    .#{$prefix-cls-select}-searchipt-text {
+        position: absolute;
+        max-width: 80%;
+        top: 1px;
+        left: .3125rem;
+        font-size: $font-size-normal;
+        line-height: $height-base;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        color: $gray-dark;
+        &.medium {
+            line-height: $height-medium;
+        }
+        &.large {
+            line-height: $height-large;
+        }
+        &.small {
+            line-height: $height-small;
+        }
+    }
+    input {
+        position: relative;
+        background: none;
+        z-index: 4;
+    }
+}
+
+.#{$prefix-cls-select}-searchIpt {
+    .#{$prefix-cls}-input-inner {
+        border: none;
+        border-bottom: 1px solid #ddd;
+    }
+}
+
+.#{$prefix-cls-select}-notFoundTxt {
+    color: #999;
+    font-size: 12px;
+    padding: 5px 10px;
+}
+
+.#{$prefix-cls-select}-popper {
+    overflow: hidden !important;
+    max-height: 100%;
+    .#{$prefix-cls-select}-extra-icon {
+        position: absolute;
+        right: 10px;
+        z-index: 4;
+        display: none;
+        height: 100%;
+    }
+    li {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        &:hover {
+            .#{$prefix-cls-select}-extra-icon {
+                display: inline-block;
+                background: #eff4f7;
+            }
+        }
+    }
+    &.#{$prefix-cls-select}-popper-large{
+        li{
+            font-size:14px;
+            line-height: 40px;
+        }
+    }
+}
+
+.#{$prefix-cls-select}-ul-bd {
+    max-height: 250px;
+    overflow: auto
+}
+
+.#{$prefix-cls-select}-ul-multi {
+    .#{$prefix-cls}-dropdown-item {
+        height: 32px;
+        overflow: hidden;
+    }
+    .#{$prefix-cls-select}-multi-icon {
+        float: right;
+        display: none;
+    }
+    .#{$prefix-cls}-multi-item-selected {
+        background: #fff;
+        .#{$prefix-cls-select}-multi-icon {
+            display: inline-block
+        }
+    }
+    .#{$prefix-cls-select}-li-text {
+        max-width: 85%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
+
+.#{$prefix-cls-select}-notify {
+    position: absolute;
+    bottom: 0;
+    height: 22px;
+    line-height: 22px;
+    width: 100%;
+    z-index: 3;
+    font-size: 12px;
+    color: #666;
+    background: #fff;
+    border-top: 1px solid #ddd;
+    text-align: center;
+}
+
+.#{$prefix-cls-select}-btn {
+    position: relative;
+    width: 100%;
+    text-align: left;
+    padding-right: 26px;
+    padding-left: 10px;
+    .#{$prefix-cls-select}-btn-text {
+        display: inline-block;
+        width: 100%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        vertical-align: middle;
+    }
+    &>i {
+        position: absolute;
+        right: 10px;
+        top: 6%;
+    }
+}
+
+.#{$prefix-cls-select}-btn-multi {
+    &.#{$prefix-cls}-btn {
+        min-height: 26px;
+        height: auto;
+        white-space: normal;
+    }
+    &.#{$prefix-cls}-large {
+        min-height: 38px;
+        height: auto;
+    }
+    &.#{$prefix-cls}-medium {
+        min-height: 30px;
+        height: auto;
+    }
+    &.#{$prefix-cls}-small {
+        min-height: 24px;
+        height: auto;
+    }
+    .#{$prefix-cls}-label-close {
+        &:hover {
+            opacity: 1
+        }
+        i {
+            opacity: 0.6;
+            &:hover {
+                opacity: 1
+            }
+        }
+        &.#{$prefix-cls}-label-dash:hover {
+            background: #fff;
+            color: $gray-dark;
+            border-color: #ccc;
+        }
+    }
+}
+
+.#{$prefix-cls-select}-item-group-title {
+    font-size: 13px;
+    color: #666;
+    padding: 5px;
+}
+
+.#{$prefix-cls-select}-item-group-ul {
+    .#{$prefix-cls}-dropdown-item {
+        padding-left: 15px
+    }
+}

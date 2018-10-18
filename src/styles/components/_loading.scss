@@ -1,0 +1,86 @@
+$prefix-cls-loading: #{$prefix-cls}-loading;
+
+.#{$prefix-cls-loading}-wrapper {
+  text-align: center;
+  display: inline-block;
+}
+
+.#{$prefix-cls-loading}-small {
+  .#{$prefix-cls-loading}-circle {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+.#{$prefix-cls-loading}-large {
+  .#{$prefix-cls-loading}-circle {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.#{$prefix-cls-loading}-show-text {
+  .#{$prefix-cls-loading}-text{
+    display: block;
+  }
+}
+
+.#{$prefix-cls-loading}-text{
+  display: none;
+}
+
+.#{$prefix-cls-loading}-circle {
+  position: relative;
+  border-top: 2px solid rgba(80, 80, 80, 0.2);
+  border-right: 2px solid rgba(80, 80, 80, 0.2);
+  border-bottom: 2px solid rgba(80, 80, 80, 0.2);
+  border-left: 2px solid #fff;
+  border-radius: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  animation: load8 1.1s infinite linear;
+}
+
+.#{$prefix-cls-loading}-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(0, 0%, 100%, 0.9);
+
+  .#{$prefix-cls-loading}-main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
+
+.#{$prefix-cls-loading}-absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(0, 0%, 100%, 0.9);
+
+  .#{$prefix-cls-loading}-main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
+
+.#{$prefix-cls-loading}-parent-relative {
+  position: relative;
+}
+
+.#{$prefix-cls-loading}-parent-hidden {
+  overflow: hidden;
+}

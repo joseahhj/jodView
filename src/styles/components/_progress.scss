@@ -1,0 +1,160 @@
+$prefix-cls-progress: #{$prefix-cls}-progress;
+
+$statusArr: 'success', 'error', 'warning';
+
+.#{$prefix-cls-progress} {
+  position: relative;
+  line-height: 1;
+  &-vertical{
+    height: 100%;
+    width: auto;
+    display: inline-block;
+    .#{$prefix-cls-progress}{
+      &-bar{
+        width: auto;
+        height: 100%;
+        display: block;
+        text-align: center;
+        &-outer{
+          display: inline-block;
+          position: relative;
+          height: 100%;
+          border-radius: 100px;
+          background: $gray-lighter;
+        }
+        &-inner{
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          border-radius: 100px;
+          background-color: $brand-success;
+          &-text{
+            top: 5px;
+            left: 0;
+            right: 0;
+            text-align: center;
+          }
+        }
+        &-active{
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 100px;
+          background-color: #fff;
+          transform-origin: 0 bottom;
+          animation: light-vertical-progress 2s ease-in-out 0s infinite
+        }
+      }
+    }
+    .#{$prefix-cls-progress}-text{
+      margin-top: 10px;
+      margin-left: 0;
+    }
+  }
+  &-bar{
+    display: inline-block;
+    width: 100%;
+    padding-right: 0;
+    margin-right: 0;
+    position: relative;
+    vertical-align: middle;
+    &-outer{
+      position: relative;
+      height: 6px;
+      border-radius: 100px;
+      background: $gray-lighter;
+    }
+    &-inner{
+      height: 100%;
+      border-radius: 100px;
+      background-color: $brand-success;
+      transition: all .3s;
+      position: relative;
+      &-text{
+        position: absolute;
+        font-size: 12px;
+        color: #fff;
+        right: 5px;
+        top: 0;
+      }
+    }
+    &-active{
+      height: 100%;
+      border-radius: 100px;
+      background-color: #fff;
+      width: 100%;
+      transform-origin: 0 0;
+      animation: light-progress 2s ease-in-out 0s infinite
+    }
+  }
+
+}
+
+.#{$prefix-cls-progress}-text{
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  margin-left: 10px;
+}
+
+.#{$prefix-cls-progress}{
+  &-circle{
+    display: inline-block;
+    .#{$prefix-cls-progress}-circle-bg{
+      stroke: $gray-lighter
+    }
+    .#{$prefix-cls-progress}-text{
+      position: absolute;
+      left: 50%;
+      top:50%;
+      transform: translate(-50%, -50%);
+      margin: 0;
+    }
+  }
+}
+
+@each $status, $color in ('success': $brand-success, 'error': $brand-error) {
+  .#{$prefix-cls-progress}-#{$status}{
+    .#{$prefix-cls-progress}-bar-inner{
+      background-color: $color;
+    }
+    .#{$prefix-cls-progress}-text{
+      color: $color;
+    }
+    path {
+      stroke: $color
+    }
+  }
+}
+
+@keyframes light-progress {
+  0%{
+    transform: scale3D(0, 1, 1);
+    opacity: .4;
+  }
+  75%{
+    transform: scale3D(1, 1, 1);
+    opacity: 0;
+  }
+  100%{
+    transform: scale3D(1, 1, 1);
+    opacity: 0;
+  }
+}
+@keyframes light-vertical-progress {
+  0%{
+    transform: scale3D(1, 0, 1);
+    opacity: .4;
+  }
+  75%{
+    transform: scale3D(1, 1, 1);
+    opacity: 0;
+  }
+  100%{
+    transform: scale3D(1, 1, 1);
+    opacity: 0;
+  }
+}

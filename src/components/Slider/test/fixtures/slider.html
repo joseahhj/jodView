@@ -1,0 +1,76 @@
+<div id="app">
+    <div style="width: 300px;">
+        <j-slider v-model="value1" ref="basic"></j-slider>
+        <j-slider :value="70" is-disabled ref="disabled"></j-slider>
+        <j-slider
+            :value="70"
+            ref="color"
+            color="#20d08c">
+        </j-slider>
+
+        <j-slider
+            :value="40"
+            ref="tooltip"
+            :is-show-tooltip="false">
+        </j-slider>
+
+        <j-slider
+            :value="value7"
+            ref="format"
+            :format-tooltip="formatTip">
+        </j-slider>
+
+        <j-slider
+            v-model="value2"
+            color="#20d08c"
+            :step="step"
+            ref="step"
+            is-show-stop>
+        </j-slider>
+
+        <j-slider
+            v-model="value5"
+            ref="range"
+            @on-change="change"
+            is-range>
+        </j-slider>
+
+
+        <j-slider
+            v-model="value6"
+            @on-change="changeSlider"
+            color="#20d08c"
+            :min="min"
+            :max="max"
+            :step="step"
+            is-range
+            ref="custom"
+            is-show-stop>
+        </j-slider>
+    </div>
+
+    <div style="width: 500px;">
+        <j-slider
+            v-model="value3"
+            color="#20d08c"
+            :step="10"
+            @on-change="change"
+            input-size="mini"
+            ref="input"
+            is-show-input>
+        </j-slider>
+
+
+    </div>
+
+    <div style="width:300px; height:300px;">
+        <j-slider
+            v-model="value4"
+            ref="vertical"
+            is-vertical>
+        </j-slider>
+
+    </div>
+
+
+</div>

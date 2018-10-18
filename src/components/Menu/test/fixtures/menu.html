@@ -1,0 +1,111 @@
+<div id="app">
+    <j-menu ref="basic" class-name="menu-cls">
+        <j-menu-item item-key="option1" ref="basicItem1">选项1</j-menu-item>
+        <j-menu-item item-key="option2" ref="basicItem2">选项2</j-menu-item>
+    </j-menu>
+    <j-menu ref="width" :width="width" :mode="mode">
+        <j-menu-item item-key="option1" ref="basicItem1">选项1</j-menu-item>
+        <j-menu-item item-key="option2" ref="basicItem2">选项2</j-menu-item>
+    </j-menu>
+    <j-menu mode="horizontal" ref="mode">
+        <j-menu-item item-key="option1">选项1</j-menu-item>
+        <j-menu-item item-key="option2">选项2</j-menu-item>
+    </j-menu>
+    <j-menu theme="blue" ref="theme">
+        <j-menu-item item-key="option1">选项1</j-menu-item>
+        <j-menu-item item-key="option2">选项2</j-menu-item>
+    </j-menu>
+    <j-menu active-key="option2" ref="activeKey">
+        <j-menu-item item-key="option1" >选项1</j-menu-item>
+        <j-menu-item item-key="option2" >选项2</j-menu-item>
+    </j-menu>
+   
+    <j-menu>
+        <j-menu-item item-key="option1" is-disabled ref="disabled">选项1</j-menu-item>
+        <j-menu-item item-key="option2" ref="noDisabled">选项2</j-menu-item>
+    </j-menu>
+    <j-menu ref="subMenu">
+        <j-menu-item item-key="option1">选项1</j-menu-item>
+        <j-menu-item item-key="option2">选项2</j-menu-item>
+        <j-menu-item item-key="option3">选项3</j-menu-item>
+        <j-submenu item-key="sub4" title="<span>导航4</span>" class-name='sub-menu-cls' ref="subMenu4">
+            <j-menu-item item-key="option4-1" ref="subMenu4Item1">选项4-1</j-menu-item>
+            <j-menu-item item-key="option4-2" ref="subMenu4Item2">选项4-2</j-menu-item>
+            <j-menu-item item-key="option4-3">选项4-3</j-menu-item>
+            <j-submenu item-key="sub4-1"  ref="subMenu4Sub">
+            	<template slot="title"><span>导航4-1</span></template>
+                <j-menu-item item-key="option4-1-1">选项4-1-1</j-menu-item>
+                <j-menu-item item-key="option4-1-2">选项4-1-2</j-menu-item>
+                <j-menu-item item-key="option4-1-3">选项4-1-3</j-menu-item>
+            </j-submenu>
+        </j-submenu>
+        <j-submenu item-key="sub5" title="<span>导航5</span>" ref="subMenu5" is-disabled>
+    		<j-menu-item item-key="option5-1">选项5-1</j-menu-item>
+    		<j-menu-item item-key="option5-2">选项5-2</j-menu-item>
+    	</j-submenu>
+    </j-menu>
+
+    <j-menu  mode="horizontal">
+        <j-menu-item item-key="option1">选项1</j-menu-item>
+        <j-menu-item item-key="option2">选项2</j-menu-item>
+        <j-menu-item item-key="option3">选项3</j-menu-item>
+        <j-submenu item-key="sub4" title="<span>导航4</span>" class-name='sub-menu-cls' ref="subMenu4Horizontal">
+            <j-menu-item item-key="option4-1">选项4-1</j-menu-item>
+            <j-menu-item item-key="option4-2">选项4-2</j-menu-item>
+            <j-menu-item item-key="option4-3">选项4-3</j-menu-item>
+            <j-submenu item-key="sub4-1"  ref="subMenu4SubHorizontal">
+                <template slot="title"><span>导航4-1</span></template>
+                <j-menu-item item-key="option4-1-1" ref="subMenu4HorizontalItem1">选项4-1-1</j-menu-item>
+                <j-menu-item item-key="option4-1-2">选项4-1-2</j-menu-item>
+                <j-menu-item item-key="option4-1-3">选项4-1-3</j-menu-item>
+            </j-submenu>
+        </j-submenu>
+    </j-menu>
+
+    <j-menu  :open-keys="['sub2']" :mode="mode">
+    	<j-menu-item item-key="option1">选项1</j-menu-item>
+    	<j-submenu item-key="sub2" title="<span>导航2</span>" ref="openKeysSub2">
+    		<j-menu-item item-key="option2-1">选项2-1</j-menu-item>
+    		<j-menu-item item-key="option2-2">选项2-2</j-menu-item>
+    	</j-submenu>
+    	<j-submenu item-key="sub3" title="<span>导航3</span>" ref="openKeysSub3">
+    		<j-menu-item item-key="option3-1">选项2-1</j-menu-item>
+    		<j-menu-item item-key="option3-2">选项2-2</j-menu-item>
+    	</j-submenu>
+    </j-menu>
+
+    <j-menu ref="isAccordion" :is-accordion='accordion' :mode="mode">
+    	<j-menu-item item-key="option1">选项1</j-menu-item>
+    	<j-submenu item-key="sub2" title="<span>导航2</span>" ref="subMenuAccordionItem1">
+    		<j-menu-item item-key="option2-1">选项2-1</j-menu-item>
+    		<j-menu-item item-key="option2-2">选项2-2</j-menu-item>
+    	</j-submenu>
+    	<j-submenu item-key="sub3" title="<span>导航3</span>" ref="subMenuAccordionItem2">
+    		<j-menu-item item-key="option3-1">选项2-1</j-menu-item>
+    		<j-menu-item item-key="option3-2">选项2-2</j-menu-item>
+    	</j-submenu>
+    </j-menu>
+
+    <j-menu ref="menuGroup" :mode="mode">
+    	<j-menu-item item-key="option1">选项1</j-menu-item>
+    	<j-submenu item-key="sub2" title="<span>导航2</span>">
+    		<j-menu-group title="分组1" >
+	    		<j-menu-item item-key="option2-1-1">选项2-1-1</j-menu-item>
+	    		<j-menu-item item-key="option2-1-2">选项2-1-2</j-menu-item>
+	    	</j-menu-group>
+	    	<j-menu-group class-name="menu-group-cls">
+	    		<j-menu-item item-key="option2-2-1">选项2-2-1</j-menu-item>
+	    		<j-menu-item item-key="option2-2-2">选项2-2-2</j-menu-item>
+	    	</j-menu-group>
+    	</j-submenu>
+    </j-menu>
+
+    <j-menu @on-select="chooseItem" @on-open-change="openChangeHandler">
+        <j-menu-item item-key="option1" ref="selectItem">选项1</j-menu-item>
+        <j-submenu item-key="sub2" title="<span>导航2</span>" ref="selectSubMenu">
+            <j-menu-item item-key="option2-1">选项2-1</j-menu-item>
+            <j-menu-item item-key="option2-2">选项2-2</j-menu-item>
+        </j-submenu>
+    </j-menu>
+
+</div>

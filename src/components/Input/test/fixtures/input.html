@@ -1,0 +1,70 @@
+<div id="app">
+    <div class="row">
+        <j-input
+            ref="basicVm"
+            v-model="basicValue"
+            :placeholder="basicPlaceholder"
+            ></j-input>
+        <j-input
+            ref="disabledVm"
+            is-disabled
+            ></j-input>
+        <j-input
+            ref="readonlyVm"
+            is-readonly
+            ></j-input>
+        <j-input
+            ref="iconVm"
+            prefix-icon="home"
+            suffix-icon="home"
+            :is-disabled="iconVmDisabled"></j-input>
+        <j-input
+            ref="lengthVm"
+            :length="length"></j-input>
+        <j-input
+            ref="sizeVm"
+            :size="size"></j-input>
+        <j-input ref="clearableVm" v-model="clearableValue" is-clearable :is-disabled="clearableDisabled"></j-input>
+        <j-input ref="focusVm" :is-focus="isFocus"></j-input>
+        <j-input ref="pendVm">
+            <template slot="prepend">Account</template>
+            <template slot="append">@jd.com</template>
+        </j-input>
+        <j-input ref="precastVm" :precast="precast"></j-input>
+        <j-input ref="classnameVm" class-name="custom-class"></j-input>
+    </div>
+    <div class="row">
+        <j-input
+            ref="filterVm"
+            v-model="filterValue"
+            :filter="filter"></j-input>
+    </div>
+    <div class="row">
+        <j-input
+            ref="textareaVm"
+            type="textarea"></j-input>
+        <j-input
+            ref="rowTextareaVm"
+            type="textarea"
+            :rows="textRows"></j-input>
+        <j-input
+            ref="autosizeTextareaVm"
+            type="textarea"
+            v-model="textareaValue"
+            is-autosize></j-input>
+        <j-input
+            ref="autosizeRowTextareaVm"
+            type="textarea"
+            :rows="rows"
+            v-model="textareaRowValue"
+            is-autosize></j-input>
+        <j-input
+            ref="resizeTextareaVm"
+            type="textarea"
+            :rows="resizeRows"
+            is-resizable></j-input>
+    </div>
+    <div class="row">
+        <j-input ref="typesVm" :type="inputType"></j-input>
+    </div>
+</div>

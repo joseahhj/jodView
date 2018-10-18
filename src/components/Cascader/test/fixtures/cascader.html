@@ -1,0 +1,56 @@
+<div id="app">
+    <div class="row">
+        <div class="h80">
+            <div class="left-demo">
+                <p class="title">Click方式打开子菜单（默认）</p>
+                <j-cascader :options="options" @on-change="getSelectItems" ref="basicClick" class-name="basicClick">
+                </j-cascader>
+            </div>
+
+            <div class="right-demo">
+                <p class="title">Hover方式打开子菜单</p>
+                <j-cascader :options="options" @on-change="getSelectItems" mode="hover" ref="basicHover" class-name="basicHover">
+                </j-cascader>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <j-cascader :options="options" :default-disabled-keys="defaultDisabled" ref="defaultDisabled" class-name="defaultDisabled">
+        </j-cascader>
+    </div>
+    <div class="row">
+        <j-cascader :options="options" :is-show-levels="false" ref="levels" class-name="levels">
+        </j-cascader>
+    </div>
+    <div class="row">
+        <j-cascader :options="options" :default-value="defaultSelected" ref="defaultVal" class-name="defaultVal">
+        </j-cascader>
+    </div>
+    <div class="row">
+        <j-cascader :options="options" is-change @on-change="getSelectItems" ref="change" class-name="change">
+        </j-cascader>
+    </div>
+    <div class="row">
+        <j-cascader :options="options" ref="slotProps" class-name="slotProps">
+            <template slot-scope="props">
+                <slot>
+                    <j-checkbox></j-checkbox>
+                    {{props.option.label}}
+                </slot>
+            </template>
+        </j-cascader>
+    </div>
+    <div class="row">
+        <j-cascader :options="options1" @on-item-change="changeOptions" ref="itemChange" class-name="itemChange">
+        </j-cascader>
+    </div>
+    <div class="row">
+        <j-cascader :options="options"
+                    is-filterable
+                    placeholder="可搜索"
+                    @on-change="getSelectItems"
+                    class-name="filterable"
+                    ref="filterable">
+        </j-cascader>
+    </div>
+</div>

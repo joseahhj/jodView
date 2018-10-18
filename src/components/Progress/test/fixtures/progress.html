@@ -1,0 +1,36 @@
+<div id="app">
+    <div style="width: 300px">
+        <j-progress :percent='30' ref="basic"></j-progress>
+        <j-progress :percent='60' color='#2db7f5' ref="color"></j-progress>
+        <j-progress :percent='60' status='active' ref="active"></j-progress>
+        <j-progress :percent='70' status='error' ref="error"></j-progress>
+        <j-progress :percent='30' is-vertical ref="vertical"></j-progress>
+        <j-progress
+            :percent='100'
+            :stroke-width='16'
+            is-inside
+            ref="stroke"
+            status='success'>
+            成功
+        </j-progress>
+    </div>
+
+
+    <j-progress
+        :percent='30'
+        :width='180'
+        ref="circle"
+        type='circle'>
+    </j-progress>
+
+
+    <j-progress
+        :percent='percent'
+        is-show-point
+        :stroke-width='4'
+        :width='150'
+        ref="point"
+        type='circle'>
+    </j-progress>
+
+</div>

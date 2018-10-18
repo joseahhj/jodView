@@ -1,0 +1,57 @@
+<div id="app">
+    <div style="width:300px">
+        <j-upload
+            :is-auto-remove="false"
+            name="fileField"
+            ref="basic"
+            :max-length="1"
+            action="https://jsonplaceholder.typicode.com/posts/">
+            <template slot="tip">
+                    <span style="color:red;" v-if="hasError">
+                        {{tip}}
+                    </span>
+                <span v-else>{{defaultTip}}</span>
+            </template>
+        </j-upload>
+    </div>
+
+
+    <div style="width:500px">
+        <j-upload
+            list-type="pic"
+            accept="image/*"
+            is-multiple
+            ref="image"
+            action="https://jsonplaceholder.typicode.com/posts/">
+            <template slot="tip">
+                请上传文件名称为'商品名称-skuId'格式的图片
+            </template>
+        </j-upload>
+    </div>
+
+
+    <div style="width:500px">
+        <j-upload
+            :max-size="20"
+            ref="list"
+            :is-show-list="false"
+            suffix="jpg|png"
+            action="https://jsonplaceholder.typicode.com/posts/">
+            <div class="jad-upload-trigger jad-upload-pic">
+
+            </div>
+        </j-upload>
+    </div>
+
+
+    <div style="width:400px">
+        <j-upload
+            is-drag
+            ref="drag"
+            is-multiple
+            :file-list="firstList"
+            action="https://jsonplaceholder.typicode.com/posts/">
+            <p>将文件拖到此处，或点击上传</p>
+        </j-upload>
+    </div>
+</div>

@@ -1,4 +1,4 @@
-## jod pc端组件库
+## jad pc端组件库
 
 为缩短开发时间，提高开发效率，开发基于vue的pc端组件库
 该组件基于vue + vue-router + webpack 组件库

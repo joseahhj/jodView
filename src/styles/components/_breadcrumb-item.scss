@@ -1,0 +1,21 @@
+$prefix-cls-breadcrumb: #{$prefix-cls}-breadcrumb;
+.#{$prefix-cls-breadcrumb} span a{
+    font-size: $font-size-normal;
+}
+.#{$prefix-cls-breadcrumb} a.#{$prefix-cls-breadcrumb}-link{
+    color: $gray-dark;
+    cursor:pointer;
+}
+.#{$prefix-cls-breadcrumb} a.#{$prefix-cls-breadcrumb}-link:hover{
+    color: $brand-primary;
+}
+.#{$prefix-cls-breadcrumb} span.#{$prefix-cls-breadcrumb}-link{
+    color: $gray-light;
+}
+.#{$prefix-cls-breadcrumb} span.#{$prefix-cls-breadcrumb}-separator{
+    color: $gray-dark;
+    padding: 0 5px;
+}
+.#{$prefix-cls-breadcrumb}:last-child span.#{$prefix-cls-breadcrumb}-separator{
+    display: none;
+} 

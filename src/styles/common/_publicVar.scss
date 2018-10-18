@@ -1,0 +1,257 @@
+//全局变量
+$jad-sass-asset-helper: false !default;
+$prefix-cls: jad !default;
+
+//theme
+$brand-primary: #016EE8 !default;
+//basic-color
+$white-base: #fff !default;
+$gray-base: #000 !default;
+$gray-darker: lighten($gray-base, 13.5%); // #222
+$gray-dark: lighten($gray-base, 20%); // #333
+$gray: lighten($gray-base, 40%); // #666
+$gray-light: lighten($gray-base, 60%); // #999
+$gray-light1: #ddd !default;// #ddd
+$gray-lighter: lighten($gray-base, 93.5%); // #eee
+
+$brand-success: #20D08C !default;
+$brand-info: #005FF1 !default;
+$brand-warning: #FFB200 !default;
+$brand-help: #b366ff !default;
+$brand-error: #E91A1A !default;
+$brand-danger: $brand-error !default;
+//secondary-color
+$alert-success: #E5FCF3 !default;
+$alert-info: #EAF3FF !default;
+$alert-warning: #FFF9EC !default;
+$alert-error: #FFEEEE !default;
+//-- Z-index master list
+$zindex-navbar: 1000 !default;
+$zindex-navbar-fixed: 1090 !default;
+
+//size 
+$height-base: 32px !default;
+$height-large: 40px !default;
+$height-medium: 36px !default;
+$height-small: 24px !default;
+//radius
+$border-radius-default: 4px !default;
+$border-radius-base: 5px !default;
+$border-radius-large: 6px !default;
+$border-radius-small: 2px !default;
+
+//== Colors
+//## Gray and brand colors for use across Bootstrap.
+$main-color-active: #fd4545!default;
+$transition-base: all .2s ease-in-out !default;
+$transition-fade: opacity .15s linear !default;
+$transition-collapse: height .35s ease !default;
+// menu style
+//== Typography
+//## Font, line-height, and color for body text, headings, and more.
+$font-family-monospace: Menlo,
+Monaco,
+Consolas,
+"Courier New",
+monospace !default;
+$font-family-base: "Helvetica Neue",
+Helvetica,
+"PingFang SC",
+"Hiragino Sans GB",
+"Microsoft YaHei",
+"微软雅黑",
+Arial,
+sans-serif !default;
+$font-size-default: 12px !default;
+$font-size-small: 12px !default;
+$font-size-normal: 14px !default;
+$font-size-large: 16px !default;
+$font-size-xlarge: 18px !default;
+$font-size-xxlarge: 24px !default;
+$line-height-default: 18px !default;
+$line-height-small: 18px !default;
+$line-height-normal: 20px !default;
+$line-height-large: 22px !default;
+$line-height-xlarge: 26px !default;
+$line-height-xxlarge: 32px !default;
+$font-weight-bold: bold !default;
+$font-weight-normal: normal !default;
+
+/*$font-size-large: ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-small: ceil(($font-size-base * 0.85)) !default; // ~12px
+
+$font-size-h1: floor(($font-size-base * 2.6)) !default; // ~36px
+$font-size-h2: floor(($font-size-base * 2.15)) !default; // ~30px
+$font-size-h3: ceil(($font-size-base * 1.7)) !default; // ~24px
+$font-size-h4: ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-h5: $font-size-base !default;
+$font-size-h6: ceil(($font-size-base * 0.85)) !default; // ~12px*/
+
+
+/*$line-height-base: 1.428571429 !default; // 20/14
+$line-height-computed: floor(($font-size-base * $line-height-base)) !default; // ~20px*/
+
+// forms
+$cursor-disabled: not-allowed !default;
+//== Iconography
+$icon-font-path: if($jad-sass-asset-helper, "./fonts", "../../src/styles/components/fonts") !default;
+//** File name for all font files.
+$icon-font-name: "jadpc" !default;
+//** Element ID within SVG icon file.
+$icon-font-svg-id: "jadpc" !default;
+//== Components
+//
+//## Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).
+$padding-base-vertical: 0px !default;
+$padding-base-horizontal: 10px !default;
+$padding-large-vertical: 10px !default;
+$padding-large-horizontal: 28px !default;
+$padding-small-vertical: 5px !default;
+$padding-small-horizontal: 10px !default;
+$padding-medium-horizontal: 20px !default;
+$padding-xs-vertical: 1px !default;
+$padding-xs-horizontal: 5px !default;
+$line-height-large: 1.3333333 !default; // extra decimals for Win 8.1 Chrome
+$line-height-small: 1.5 !default;
+
+//** Global color for active items (e.g., navs or dropdowns).
+$component-active-color: #fff !default;
+//** Global background color for active items (e.g., navs or dropdowns).
+$component-active-bg: $brand-primary !default;
+//** Width of the `border` for generating carets that indicate dropdowns.
+$caret-width-base: 4px !default;
+//** Carets increase slightly in size for larger components.
+$caret-width-large: 5px !default;
+//== Tables
+//
+//** Padding for `<th>`s and `<td>`s.
+$table-cell-padding: 8px !default;
+//** Padding for cells in `.table-condensed`.
+$table-condensed-cell-padding: 5px !default;
+//** Default background color used for all tables.
+$table-bg: transparent !default;
+//** Background color used for `.table-striped`.
+$table-bg-accent: #f9f9f9 !default;
+//** Background color used for `.table-hover`.
+$table-bg-hover: #f5f5f5 !default;
+$table-bg-active: $table-bg-hover !default;
+//** Border color for table and cell borders.
+$table-border-color: #ddd !default;
+//== Buttons
+$btn-line-24: 24px !default;
+$btn-font-weight: normal !default;
+$btn-default-color: #333 !default;
+$btn-default-bg: #fff !default;
+$btn-default-border: #ccc !default;
+$btn-primary-color: #333 !default;
+$btn-primary-bg: $brand-primary !default;
+$btn-primary-border: #ddd !default;
+$btn-success-color: #fff !default;
+$btn-success-bg: $brand-success !default;
+$btn-success-border: darken($btn-success-bg, 5%) !default;
+$btn-info-color: #fff !default;
+$btn-info-bg: $brand-info !default;
+$btn-info-border: darken($btn-info-bg, 5%) !default;
+$btn-warning-color: #fff !default;
+$btn-warning-bg: $brand-warning !default;
+$btn-warning-border: darken($btn-warning-bg, 5%) !default;
+$btn-danger-color: #fff !default;
+$btn-danger-bg: $brand-danger !default;
+$btn-danger-border: darken($btn-danger-bg, 5%) !default;
+$btn-link-disabled-color: $gray-light !default;
+// Allows for customizing button radius independently from global border radius
+// $btn-height-base: 32px !default;
+// $btn-height-large: 40px !default;
+// $btn-height-medium: 36px !default;
+// $btn-height-small: 24px !default;
+
+
+$btn-line-height-base: 30px !default;
+$btn-line-height-large: 38px !default;
+$btn-line-height-medium: 34px !default;
+$btn-line-height-small: 20px !default;
+$btn-padding-large: 28px !default;
+$btn-padding-medium: 20px !default;
+$btn-padding-small: 5px !default;
+$btn-padding-base: 10px !default;
+$primary-form-color: #fff !default;
+$primary-to-color: #f6f6f6 !default;
+$secondary-form-color: #fd4545 !default;
+$secondary-to-color: #f62a2a !default;
+$secondary-active-form-color: #dc2222 !default;
+$secondary-active-to-color: #f03d3d !default;
+$primary-active-form-color: #e7e7e7 !default;
+$primary-active-to-color: #f1f1f1 !default;
+$info-color: #2db7f5 !default;
+$btn-transition: color .15s ease-in-out,
+background-color .15s ease-in-out,
+border-color .15s ease-in-out,
+box-shadow .15s ease-in-out !default;
+$theme-colors: () !default;
+$theme-colors: map-merge(( "primary": $brand-primary, "success": $brand-success, "info": $brand-info, "warning": $brand-warning, "error": $brand-error, ), $theme-colors);
+//== Tables
+//
+// default
+$switch-default-bg: #ddd !default;
+$switch-open-bg: #20d08c !default;
+$switch-open-bg-red: #fd4545 !default;
+$switch-open-bg-blue: #2db7f5 !default;
+$switch-circle-bg: #fff !default;
+$switch-disabled-circle-bg: $gray-lighter!default;
+$switch-disabled-bg: $gray-light1 !default;
+$switch-text-color: #fff !default;
+$switch-default-height: 14px !default;
+$switch-default-left: 2px !default;
+$switch-default-width: 40px !default;
+$switch-default-circle: 20px !default;
+$switch-default-checked-left: 20px !default;
+// large
+$switch-large-height: 24px !default;
+$switch-large-left: 4px !default;
+$switch-large-width: $switch-large-height * 2 !default;
+$switch-large-circle: $switch-large-height - $switch-large-left !default;
+$switch-large-checked-left: $switch-large-width - $switch-large-height !default;
+// Extra small screen 
+// Small screen / tablet
+$screen-sm: 768px !default;
+$screen-sm-min: $screen-sm !default;
+$screen-tablet: $screen-sm-min !default;
+// Medium screen / desktop
+$screen-md: 992px !default;
+$screen-md-min: $screen-md !default;
+$screen-desktop: $screen-md-min !default;
+// Large screen / wide desktop
+$screen-lg: 1200px !default;
+$screen-lg-min: $screen-lg !default;
+$screen-lg-desktop: $screen-lg-min !default;
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max: ($screen-sm-min - 1) !default;
+$screen-sm-max: ($screen-md-min - 1) !default;
+$screen-md-max: ($screen-lg-min - 1) !default;
+//== Grid system
+//
+//## Define your custom responsive grid.
+//** Number of columns in the grid.
+$grid-columns: 24 !default;
+//** Padding between columns. Gets divided in half for the left and right.
+$grid-gutter-width: 0 !default;
+// Navbar collapse
+//** Point at which the navbar becomes uncollapsed.
+$grid-float-breakpoint: $screen-sm-min !default;
+//** Point at which the navbar begins collapsing.
+$grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
+//== Container sizes
+//
+//## Define the maximum width of `.container` for different screen sizes.
+// Small screen / tablet
+$container-tablet: (720px + $grid-gutter-width) !default;
+//** For `$screen-sm-min` and up.
+$container-sm: $container-tablet !default;
+// Medium screen / desktop
+$container-desktop: (940px + $grid-gutter-width) !default;
+//** For `$screen-md-min` and up.
+$container-md: $container-desktop !default;
+// Large screen / wide desktop
+$container-large-desktop: (1140px + $grid-gutter-width) !default;
+//** For `$screen-lg-min` and up.
+$container-lg: $container-large-desktop !default;

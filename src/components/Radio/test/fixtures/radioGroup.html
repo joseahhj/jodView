@@ -1,0 +1,33 @@
+<div id="app">
+    <div class="row">
+        <j-radio-group ref="radioGroup" v-model="radioGroup" :options="options"></j-radio-group>
+    </div>
+    <div class="row">
+        <j-radio-group ref="verticalGroup" v-model="verticalGroup" :options="options" is-vertical></j-radio-group>
+    </div>
+    <div class="row">
+        <j-radio-group ref="slotGroup" v-model="slotGroup">
+            <j-radio label="Chrome">
+                <j-icon type="chrome" style="vertical-align: middle"></j-icon>
+                谷歌
+            </j-radio>
+            <j-radio label="Firefox">
+                <j-icon type="firefox" style="vertical-align: middle"></j-icon>
+                火狐
+            </j-radio>
+            <j-radio label="IE">
+                <j-icon type="ie" style="vertical-align: middle"></j-icon>
+                IE
+            </j-radio>
+        </j-radio-group>
+    </div>
+    <div class="row">
+        <j-radio-group ref="buttonGroup" v-model="buttonGroup" :options="options" type="button" is-vertical></j-radio-group>
+    </div>
+    <div class="row">
+        <j-radio-group ref="buttonSizeGroups" v-for="size of sizes" :key="size" v-model="buttonGroup" :options="options" type="button" :size="size"></j-radio-group>
+    </div>
+    <div class="row">
+        <j-radio-group ref="eventGroup" v-model="eventGroup" :options="options" @on-change="onChange"></j-radio-group>
+    </div>
+</div>

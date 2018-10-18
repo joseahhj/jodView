@@ -1,0 +1,22 @@
+$prefix-cls-card: #{$prefix-cls}-card;
+
+
+.#{$prefix-cls-card} {
+  border-radius: 4px;
+  border: 1px solid #eaeaea;
+  background-color: #fff;
+  overflow: hidden;
+  color: #303133;
+  transition: .3s;
+  .#{$prefix-cls-card}-header {
+    padding: 18px 20px;
+    border-bottom: 1px solid #eaeaea;
+    box-sizing: border-box;
+  }
+  .#{$prefix-cls-card}-body {
+    padding: 20px;
+  }
+  &.#{$prefix-cls-card}-always, &.#{$prefix-cls-card}-hover:focus, &.#{$prefix-cls-card}-hover:hover {
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .1);
+  }
+}

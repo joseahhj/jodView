@@ -1,0 +1,11 @@
+<div id="app">
+    <div class="row">
+        <j-radio ref="radios" v-for="item in choices" :key="item" v-model="radioOne" :label="item"></j-radio>
+    </div>
+    <div class="row">
+        <j-radio ref="disabledRadio" v-model="disabledOne" label="disabled" is-disabled></j-radio>
+    </div>
+    <div class="row">
+        <j-radio ref="eventRadios" v-for="item in choices" :key="item" v-model="eventOne" :label="item" @on-change="onChange"></j-radio>
+    </div>
+</div>

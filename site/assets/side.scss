@@ -1,0 +1,81 @@
+.bd-sidebar{
+  position: fixed;
+  top: 84px;
+  bottom: 0;
+  left: 0;
+  font-size: 14px;
+  width:316px;
+  z-index: 99;
+  padding:36px 0 20px;
+  overflow-y: auto;
+  background: #f7f7f7;
+  color:rgba(0,0,0,0.80);
+  a {
+	 color: rgba(0,0,0,0.60);
+	
+  }
+  .spl40{
+    padding-left: 40px;
+  }
+  .gray{
+    color:#999
+  }
+  .lh40{
+    line-height: 42px;
+  }
+  .rule-side{
+    padding-left: 40px;
+    line-height: 42px;
+    a{
+      color:rgba(0,0,0,0.60);
+    }
+    li:hover{
+      a{
+        color:#E1251B;
+      }
+    }
+  }
+}
+.positionAbs{
+  bottom: 200px;
+}
+.s-menu-vertical {
+  width: 100%!important;
+  background: none;
+  border:none;
+	.jad-menu-sub-title{
+    font-size:16px;
+    padding-right: 0;
+    span{
+      font-weight: 700;
+    }
+    .jad-icon{
+      float:right;
+      font-size:20px;
+      color: rgba(0,0,0,0.40);
+    }
+  }
+  .jad-menu-sub-title{
+    padding:0 70px 0 40px;
+  }
+  
+  .jad-menu-sub-content{
+    padding-left: 28px;
+  }
+  a{
+    color:rgba(0,0,0,0.60);
+  }
+  .jad-menu-item:hover{
+    a{
+      color:#E1251B;
+    }
+  }
+}
+.s-memu-toli{
+  
+  li:hover{
+    a{
+      color:#E1251B;
+    }
+  }
+}

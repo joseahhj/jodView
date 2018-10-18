@@ -1,0 +1,66 @@
+
+
+// tag variants
+//
+// Easily pump out default styles, as well as :hover, :focus, :active,
+// and disabled options for all buttons
+
+@mixin tag-variant($color, $background, $border) {
+    color: $color;
+    border-color: $border;
+    background: $background;
+    font-weight:400;
+    &.disabled,
+    &[disabled],
+    fieldset[disabled]{
+        &,
+        &:hover,
+        &:focus,
+        &.focus {
+            background-color: #ddd;
+            border-color: #ddd;
+            opacity: 0.6;
+            color:#666;
+            cursor: not-allowed;
+        }
+    }
+
+}
+@mixin tag-outline-variant($color, $color-hover, $border: $color, $active-background: $color, $active-border: $color) {
+    color: $color;
+    background-color: #fff;
+    background-image: none;
+    border-color: $border;
+    &.disabled,
+    &:disabled {
+        &,
+        &:hover,
+        &:focus,
+        &.focus{
+            color: #666;
+            border-color: #ddd;
+            background-color: #fff;
+            cursor: not-allowed;
+        }
+    }
+    
+}
+
+// tag sizes
+@mixin tag-size($padding-horizontal, $font-size, $line-height, $height) {
+    padding: 0 $padding-horizontal;
+    font-size: $font-size;
+    line-height: $line-height;
+    height: $height;
+}
+
+@mixin tag-load($borderW,$color: 255){
+    border-top: $borderW solid rgba($color, $color, $color, 0.2);
+    border-right: $borderW solid rgba($color, $color, $color, 0.2);
+    border-bottom: $borderW solid rgba($color, $color, $color, 0.2);
+    border-left: $borderW solid #fff;
+}
+@mixin tag-load-width($boxW){
+    width: $boxW;
+    height: $boxW;
+}

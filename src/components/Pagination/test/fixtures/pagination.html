@@ -1,0 +1,74 @@
+<div id="app">
+    <j-pagination
+        :total="80"
+        :page-index="3"
+        ref="basic">
+    </j-pagination>
+
+
+    <j-pagination
+        :total="100"
+        @on-change="change"
+        :page-index="1"
+        ref="background"
+        is-background>
+    </j-pagination>
+
+
+    <j-pagination
+        :total="100"
+        :page-index="1"
+        size="small"
+        @on-change="changePage"
+        ref="small">
+    </j-pagination>
+
+
+    <j-pagination
+        ref="outsideChange"
+        :total="100"
+        :page-index="pageIndex"
+        size="small"
+        @on-change="handleChange"
+        is-background>
+    </j-pagination>
+
+
+    <j-pagination
+        ref="pageCount"
+        :total="countTotal"
+        :page-index="1"
+        size="small"
+        :page-count="7"
+        is-background>
+    </j-pagination>
+
+
+    <j-pagination
+        ref="total"
+        :total="total"
+        :page-index="1"
+        :page-size="20"
+        size="small"
+        is-background>
+    </j-pagination>
+
+
+    <j-pagination
+        ref="layout"
+        :total="200"
+        :page-index="1"
+        size="small"
+        layout="prev,pager,next,total,sizer,jumper"
+        is-background>
+    </j-pagination>
+
+
+    <j-pagination
+        ref="simple"
+        :total="100"
+        @on-change="change"
+        :page-index="1"
+        is-simple>
+    </j-pagination>
+</div>
