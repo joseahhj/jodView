@@ -1,0 +1,116 @@
+huanghaijin-mac (114):
+      新建项目
+      修改packjson
+      修改安装包
+      新建目录
+      官网实现方式固定
+      配置打包环境，增加规范说明
+      官网样式和功能优化完成
+      去掉多余的依赖包
+      加上单元测试
+      删除单元测试结果文件夹
+      完善规则
+      把规范引入页面中
+      测试bug修复
+      测试bug修复01
+      完善组件目录和文档说明
+      组件官网搜索功能完成
+      组件分类规范完善
+      项目reade
+      整理组件公共样式
+      晚上目录结构说明
+      优化doc
+      整理公共样式1
+      grid组件创建
+      屏蔽修改主题
+      [feature #5] grid组件逻辑开发完
+      [dev]layout组件开发完毕
+      [feature dev]icon组件整理完毕
+      [feature #5]icon组件开发完毕
+      [bug #5] 监听icon路由
+      [feature #5]button组件基础功能开发完毕
+      [feature #5]button加样式
+      [bug]配置文件夹autoprefix
+      [feature #5]button组件样式整理
+      [feature #5]button组件加loading功能
+      [feature #2]添加规范
+      [feature #5]新增button-group
+      [feature #5]新增button-group形状样式
+      dropdown组件基础功能完成
+      Merge branch 'dev' of http://git.jd.com/ads-fe/jad-pc into dev_hhj
+      popper不校验
+      增加npm publish
+      配置文件修改
+      修改打包文件
+      完善安装说明
+      dropdowm BUG修复
+      大小写问题
+      修改打包配置文件-修复字体路径打包问题
+      Merge branch 'dev' of http://git.jd.com/ads-fe/jad-pc into dev_hhj
+      Merge branch 'dev' of http://git.jd.com/ads-fe/jad-pc into dev_hhj
+      合并dev分支
+      新建select组件
+      tag组件开发完
+      Merge branch 'dev' of http://git.jd.com/ads-fe/jad-pc into dev_hhj
+      popperjs修改
+      [bugFix #41]修改tooltip和popover的样式
+      Merge branch 'dev' of http://git.jd.com/ads-fe/jad-pc into dev_hhj
+      Merge branch 'dev' of http://git.jd.com/ads-fe/jad-pc
+      发版0.0.14
+      Merge branch 'dev' of http://git.jd.com/ads-fe/jad-pc
+      发布0.0.15
+      [bugfix #44]dropdowm的popper宽度拼写修复
+      发版0.0.18
+      Merge branch 'dev' of http://git.jd.com/ads-fe/jad-pc
+      发版0.0.19
+      Merge branch 'master' of http://git.jd.com/ads-fe/jad-pc
+      [bugfix][#48]日历组件输入，select组件禁用优化
+      Merge branch 'dev' of http://git.jd.com/ads-fe/jad-pc into dev_hhj
+      发布0.0.25版本
+      Merge branch 'dev' of http://git.jd.com/ads-fe/jad-pc
+      发布0.0.26
+      Merge branch 'master' of http://git.jd.com/ads-fe/jad-pc into p_#35_hhj
+      发布0.0.27最新版本
+      Merge branch 'dev' of http://git.jd.com/ads-fe/jad-pc
+      发布版本0.0.28
+      [feature][#59]首页样式
+      [bugfix][#61]reset样式加到组件里
+      Merge branch 'dev' of http://git.jd.com/ads-fe/jad-pc into dev_hhj
+      发布最新版本0.0.29
+      [bugfix][#61]日历组件渲染重构
+      [bugfix][#61]日历组件优化，select组件优化
+      Merge branch 'master' of http://git.jd.com/ads-fe/jad-pc into p_#59_hhj
+      [bugfix][#61]select组件demo更改
+      [feature][#59]左侧样式修改
+      发布0.0.30版本
+      [feature][#59]官网首页样式优化，路由优化
+      Merge branch 'master' of http://git.jd.com/ads-fe/jad-pc into p_#59_hhj
+      [feature][#59]官网首页样式优化
+      [feature][#59]官网首页样式优化1
+      [feature][#59]官网首页样式优化3
+      [feature][#59]官网首页样式优化4
+      [feature][#59]官网首页样式优化5
+      [feature][#59]webpack。base修改图片路径
+      修改打包方式
+      Merge branch 'master' of http://git.jd.com/ads-fe/jad-pc into dev
+      [bugfix][#61]model全局调用修改
+      发布0.0.32版本
+      [feature][#35]日历组件的测试用例
+      [feature][#35]datepicker测试用例
+      Merge branch 'dev' of http://git.jd.com/ads-fe/jad-pc into p_#35_hhj
+      [feature][#35]首页背景图更换
+      [feature][#62]官网样式优化
+      Merge branch 'dev' of http://git.jd.com/ads-fe/jad-pc into dev_hhj
+      [feature][#64]spin组件开发完成
+      [feature][#64]spin组件开发完成
+      [feature][#63]spin组件api修改
+      [feature][#62]button,日历组件样式修改
+      [feature][#62]日历组件样式修改
+      [feature][#62]组件样式修改
+      新增日志
+      更新新增日志
+      [feature][#62]icon图标重新整理,spinner加动画
+      Merge branch 'dev' of http://git.jd.com/ads-fe/jad-pc into dev_hhj
+      [feature][#62]modal全局渲染优化
+      [feature][#62]icon-spinner加动画
+

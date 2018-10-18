@@ -1,0 +1,109 @@
+{
+    "name": "jad-pc",
+    "version": "0.0.44",
+    "description": "A components of pc base on vue",
+    "main": "dist/jad.js",
+    "style": "dist/jad.css",
+    "files": [
+        "dist",
+        "src"
+    ],
+    "scripts": {
+        "test": "cross-env NODE_ENV=test jest -u",
+        "lint": "eslint --ext .vue,.js ./src",
+        "fix": "eslint --fix --ext .vue,.js ./src",
+        "precommit-msg": "echo 'Pre-commit checks...' && exit 0",
+        "dll": "webpack --config build/webpack.dll.js",
+        "dev": "cross-env NODE_ENV=develop webpack-dev-server --open --inline --config build/dev.js",
+        "build": "cross-env NODE_ENV=production webpack --progress --hide-modules --config build/webpack.prodCompontent.js",
+        "bsite": "cross-env NODE_ENV=production webpack --progress --hide-modules --config build/webpack.prodSite.js",
+        "authors": "git log --format='%aN <%aE>' | sort -u  > AUTHORS.txt",
+        "publish-npm": "npm run authors && npm publish",
+        "deploy": "npm run bsite && sh deploy.sh && pm2 restart http-server"
+    },
+    "jest": {
+        "verbose": true,
+        "coverageDirectory": "coverage",
+        "testEnvironment": "jsdom",
+        "collectCoverage": true,
+        "moduleFileExtensions": [
+            "js",
+            "vue"
+        ],
+        "transform": {
+            "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
+            ".*\\.(vue)$": "<rootDir>/node_modules/vue-jest"
+        },
+        "snapshotSerializers": [
+            "<rootDir>/node_modules/jest-serializer-vue"
+        ],
+        "coverageReporters": [
+            "lcov",
+            "text"
+        ],
+        "testPathIgnorePatterns": [     
+              "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$",
+              "<rootDir>/node_modules/"
+        ],
+        "testURL":"http://localhost/"
+    },
+    "keywords": [
+        "vue",
+        "组件"
+    ],
+    "author": "jad-fe",
+    "license": "ISC",
+    "dependencies": {
+        "chokidar": "^2.0.0",
+        "copy-webpack-plugin": "^4.3.1",
+        "g": "^2.0.1",
+        "highlightjs": "^9.10.0",
+        "popper.js": "^1.14.1",
+        "ramda": "^0.25.0",
+        "vue": "2.5.13"
+    },
+    "devDependencies": {
+        "assets-webpack-plugin": "^3.5.1",
+        "autoprefixer": "^8.1.0",
+        "babel-core": "^6.26.0",
+        "babel-eslint": "^8.2.1",
+        "babel-jest": "^22.1.0",
+        "babel-loader": "^7.1.2",
+        "babel-plugin-transform-runtime": "^6.23.0",
+        "babel-preset-env": "^1.6.1",
+        "babel-preset-es2015": "^6.24.1",
+        "babel-preset-stage-0": "^6.24.1",
+        "babel-preset-stage-2": "^6.24.1",
+        "clean-webpack-plugin": "^0.1.17",
+        "cross-env": "^5.1.3",
+        "css-loader": "^0.28.8",
+        "eslint": "^4.15.0",
+        "eslint-plugin-html": "^4.0.1",
+        "extract-text-webpack-plugin": "^3.0.2",
+        "file-loader": "^1.1.6",
+        "highlight-loader": "^0.7.2",
+        "html-loader": "^0.5.4",
+        "html-webpack-plugin": "^2.30.1",
+        "jest": "^22.4.4",
+        "jest-serializer-vue": "^0.3.0",
+        "meta-marked-loader": "^1.1.0",
+        "node-sass": "^4.7.2",
+        "postcss-loader": "^2.1.2",
+        "pre-commit": "^1.2.2",
+        "pygmentize-bundled": "^2.3.0",
+        "sass-loader": "^6.0.6",
+        "style-loader": "^0.19.1",
+        "url-loader": "^0.6.2",
+        "vue-jest": "^2.0.0",
+        "vue-loader": "^13.7.0",
+        "vue-router": "^3.0.1",
+        "vue-template-compiler": "2.5.13",
+        "webpack": "^3.10.0",
+        "webpack-dev-server": "^2.10.1",
+        "webpack-merge": "^4.1.1"
+    },
+    "pre-commit": [
+        "precommit-msg",
+        "lint"
+    ]
+}
