@@ -47,7 +47,7 @@ npm run build
 
 ## 开发者
 
-* 黄海金 - <huanghaijin@jd.com>
+* 黄海金 - <hhjzgm@163.com>
 * 魏珊珊 - <weishanshan1@jd.com>
 * 杜晓雪 - <duxiaoxue@jd.com>
 * 杨兵 - <yangbing5@jd.com>
