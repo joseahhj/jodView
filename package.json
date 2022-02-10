@@ -87,7 +87,7 @@
         "jest": "^22.4.4",
         "jest-serializer-vue": "^0.3.0",
         "meta-marked-loader": "^1.1.0",
-        "node-sass": "^4.7.2",
+        "node-sass": "^7.0.0",
         "postcss-loader": "^2.1.2",
         "pre-commit": "^1.2.2",
         "pygmentize-bundled": "^2.3.0",
